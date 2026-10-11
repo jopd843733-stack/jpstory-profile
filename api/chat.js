@@ -106,6 +106,8 @@ export default async function handler(req, res) {
     } else {
       console.error(`챗봇 처리 오류(${stage}):`, err.message);
     }
-    return sendJson(res, 200, { reply: FALLBACK_REPLY, degraded: true, stage });
+    // 원인 구분용 코드: HTTP 상태 번호 또는 missing_env (키 값은 노출하지 않음)
+    const detail = err.status || (/환경 변수/.test(err.message) ? "missing_env" : "error");
+    return sendJson(res, 200, { reply: FALLBACK_REPLY, degraded: true, stage, detail });
   }
 }
