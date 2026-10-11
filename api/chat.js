@@ -53,9 +53,12 @@ export default async function handler(req, res) {
     return sendJson(res, 400, { error: "잘못된 세션입니다. 새로고침 후 다시 시도해 주세요." });
   }
 
+  // 실패 단계만 응답에 남긴다 (키·오류 내용은 노출하지 않음): embed / search / generate / log
+  let stage = "embed";
   try {
     // 1) 질문 임베딩 → 2) 유사 문서 검색
     const [queryEmbedding] = await embed([message]);
+    stage = "search";
     const db = supabaseAdmin();
     const [{ data: matches, error: matchError }, { data: core }] = await Promise.all([
       db.rpc("match_documents", { query_embedding: queryEmbedding, match_count: MATCH_COUNT }),
@@ -66,6 +69,7 @@ export default async function handler(req, res) {
     if (core?.[0] && !docs.some((d) => d.source === CORE_SOURCE)) docs.unshift(core[0]);
 
     // 3) 검색된 문서만 근거로 답변 생성
+    stage = "generate";
     anthropic ||= new Anthropic({ apiKey: requireEnv("ANTHROPIC_API_KEY") });
     const response = await anthropic.beta.messages.create({
       model: CHAT_MODEL,
@@ -87,6 +91,7 @@ export default async function handler(req, res) {
       .trim();
     const reply = response.stop_reason === "refusal" || !text ? FALLBACK_REPLY : text;
 
+    stage = "log";
     await logChat([
       { session_id: sessionId, role: "user", content: message },
       { session_id: sessionId, role: "assistant", content: reply },
@@ -99,8 +104,8 @@ export default async function handler(req, res) {
     } else if (err instanceof Anthropic.APIError) {
       console.error(`Claude API 오류 ${err.status}:`, err.message);
     } else {
-      console.error("챗봇 처리 오류:", err.message);
+      console.error(`챗봇 처리 오류(${stage}):`, err.message);
     }
-    return sendJson(res, 200, { reply: FALLBACK_REPLY, degraded: true });
+    return sendJson(res, 200, { reply: FALLBACK_REPLY, degraded: true, stage });
   }
 }
