@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary":"#000000","on-background":"#0b1c30","error-container":"#ffdad6","border-strong":"#CBD5E1","on-tertiary-fixed":"#00174b","border-subtle":"#E2E8F0","text-secondary":"#475569","tertiary-fixed-dim":"#b4c5ff","surface-card":"#FFFFFF","on-primary-container":"#7c839b","on-tertiary-fixed-variant":"#003ea8","secondary-container":"#e21e49","surface-variant":"#d3e4fe","primary-fixed-dim":"#bec6e0","primary":"#000000","inverse-primary":"#bec6e0","tertiary-fixed":"#dbe1ff","on-primary-fixed":"#131b2e","inverse-surface":"#213145","outline-variant":"#c6c6cd","on-primary":"#ffffff","tertiary-container":"#00174b","on-secondary-fixed-variant":"#920028","media-accent-hover":"#BE123C","secondary-fixed-dim":"#ffb3b6","on-error-container":"#93000a","status-verified":"#059669","background":"#f8f9ff","navy-deep":"#0A0F1D","primary-fixed":"#dae2fd","surface-tint":"#565e74","surface-container-highest":"#d3e4fe","outline":"#76777d","surface-container":"#e5eeff","navy-light":"#1E293B","primary-container":"#131b2e","surface-canvas":"#F8FAFC","on-error":"#ffffff","on-secondary-container":"#fffbff","on-tertiary":"#ffffff","on-secondary":"#ffffff","surface-dim":"#cbdbf5","surface-bright":"#f8f9ff","error":"#ba1a1a","on-surface":"#0b1c30","inverse-on-surface":"#eaf1ff","text-muted":"#94A3B8","on-surface-variant":"#45464d","on-secondary-fixed":"#40000c","on-primary-fixed-variant":"#3f465c","surface-container-lowest":"#ffffff","surface-container-low":"#eff4ff","on-tertiary-container":"#497cff","surface-container-high":"#dce9ff","text-primary":"#0F172A","secondary-fixed":"#ffdada","surface-slate-subtle":"#F1F5F9","surface":"#f8f9ff","tech-blue-soft":"#EFF6FF","secondary":"#ba0035","media-accent-soft":"#FFE4E6"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-3xl":"6rem","space-md":"1rem","space-xs":"0.25rem","space-sm":"0.5rem","margin":"2rem","space-xl":"2.5rem","gutter-mobile":"1rem","margin-mobile":"1.25rem","space-lg":"1.5rem","gutter":"1.5rem","space-2xl":"4rem"},"fontFamily":{"body-sm":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-sm":["Inter"],"display-hero-mobile":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"],"label-md":["Inter"],"label-tech":["Space Grotesk"],"body-md":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-lg":["Inter"],"body-legal":["Inter"]},"fontSize":{"body-sm":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-md":["22px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-sm":["12px",{"lineHeight":"16px","fontWeight":"500"}],"display-hero-mobile":["36px",{"lineHeight":"46px","letterSpacing":"-0.02em","fontWeight":"800"}],"display-hero":["56px",{"lineHeight":"68px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-md":["14px",{"lineHeight":"20px","fontWeight":"600"}],"label-tech":["12px",{"lineHeight":"16px","letterSpacing":"0.06em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"26px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-xl-mobile":["28px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-xl":["40px",{"lineHeight":"52px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"42px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}],"body-legal":["12px",{"lineHeight":"18px","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4"><div class="flex items-center gap-4 shrink-0"><a class="flex items-center gap-3" data-path="home" href="#"><div class="w-10 h-10 rounded-lg bg-navy-deep flex items-center justify-center text-on-primary font-headline-md text-headline-md tracking-tighter">JP</div><div class="flex flex-col"><div class="flex items-center gap-2"><span class="font-headline-md text-headline-md text-text-primary tracking-tight">JP이야기</span><span class="font-label-tech text-label-tech px-2 py-0.5 rounded-full bg-tech-blue-soft text-on-surface font-semibold">7YR EXP</span></div><span class="font-body-legal text-body-legal text-text-secondary">월드원공인중개사사무소</span></div></a></div><nav class="hidden xl:flex items-center gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-slate-subtle transition-colors" data-path="services" href="#">서비스 소개</a><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-slate-subtle transition-colors" data-path="about" href="#">대표 소개</a><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-slate-subtle transition-colors" data-path="media" href="#">유튜브 콘텐츠</a><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-slate-subtle transition-colors" data-path="process" href="#">진행 절차</a><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-slate-subtle transition-colors" data-path="channels" href="#">공식 채널</a><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-slate-subtle transition-colors" data-path="consultation" href="#">상담 문의</a></nav><div class="flex items-center gap-3 shrink-0"><a class="hidden sm:inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-navy-deep hover:bg-navy-light text-on-primary font-label-md text-label-md transition-all shadow-[0_1px_3px_rgba(15,23,42,0.08)]" href="tel:010-3848-5949"><span class="material-symbols-outlined text-[18px]">call</span><span>빠른 상담 문의 (010-3848-5949)</span></a><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-border-subtle" src="https://lh3.googleusercontent.com/aida/AEtjO1VS0gasD22nx0ZEMsAD3Qd3j0IxxxodcNA7MSRWwBQy2ExZmG9nhnzVDJQrJogBF4vkBYBWB1CWxJj-0L8jZlwLX8zMCxI_LiYCn3V1JGb5HRUxrBO3_bMvmxQkDtIAXg3tIzHp0xUB69vMm8g3LNBI0yrzLO4faokkrJbVgYM5fksdnUkPf9RMVOGPzJnkxdAnv1RLDozEnf_glZ8LbwP2bAlfOIpXEB0nciuyLBBpCzsa10qGrX7DTai1"/></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Ambient Glow Line -->
+<div class="w-full h-1 bg-gradient-to-r from-navy-deep via-secondary to-navy-light"></div>
+<!-- HERO SECTION -->
+<section class="relative overflow-hidden bg-gradient-to-b from-surface-canvas via-white to-surface py-16 lg:py-24">
+<!-- Viewfinder subtle overlay elements -->
+<div class="absolute inset-0 pointer-events-none opacity-40">
+<div class="max-w-7xl mx-auto h-full px-6 lg:px-12 relative">
+<div class="absolute top-8 left-8 flex items-center gap-2 font-label-tech text-label-tech text-text-muted">
+<span class="material-symbols-outlined text-[16px] text-secondary">videocam</span>
+<span>REC [4K 60FPS // DRONE GIMBAL]</span>
+</div>
+<div class="absolute top-8 right-8 font-label-tech text-label-tech text-text-muted hidden sm:block">
+<span>LAT 37.5078° N / LON 127.0315° E (GANGNAM)</span>
+</div>
+<div class="absolute bottom-10 left-8 font-label-tech text-label-tech text-text-muted hidden md:flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-status-verified animate-ping"></span>
+<span>DIRECT AGENT 1:1 DISPATCH VERIFIED</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Text Hero Area -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<!-- Catchphrase Badge -->
+<div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-tech-blue-soft w-fit">
+<span class="material-symbols-outlined text-secondary text-[18px]">flight</span>
+<span class="font-label-tech text-label-tech text-text-primary tracking-tight">
+              드론 &amp; IT 장비로 현장을 생생하게 담아내는 7년차 공인중개사
+            </span>
+</div>
+<!-- Main Hero Headline -->
+<h1 class="font-headline-xl text-headline-xl text-text-primary tracking-tight leading-[1.25]">
+            영상으로 검증하고 발로 뛰는<br/>
+<span class="relative inline-block text-secondary">
+              신뢰의 부동산 파트너
+            </span>
+            , JP이야기
+          </h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-body-lg text-text-secondary max-w-2xl">
+            상담부터 현장 브리핑, 계약, 잔금까지 임재필 대표가 직접 책임집니다.<br class="hidden sm:inline"/>
+            서울 강남 거평타운 소재 월드원공인중개사사무소의 1:1 맞춤형 부동산 솔루션.
+          </p>
+<!-- CTA Buttons -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="px-6 py-3.5 rounded-lg bg-navy-deep hover:bg-navy-light text-on-primary font-label-md text-label-md transition-all shadow-md flex items-center gap-2" href="#inquiry">
+<span class="material-symbols-outlined text-[20px]">edit_calendar</span>
+<span>상담 및 매물문의 접수하기</span>
+</a>
+<a class="px-6 py-3.5 rounded-lg bg-secondary hover:bg-media-accent-hover text-on-secondary font-label-md text-label-md transition-all shadow-md flex items-center gap-2" href="https://www.youtube.com" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">play_circle</span>
+<span>유튜브 채널 둘러보기 (16.5K)</span>
+</a>
+</div>
+<!-- Metric highlights (4 stat counters) -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6">
+<div class="p-4 rounded-xl bg-white shadow-sm flex flex-col gap-1">
+<span class="font-label-tech text-label-tech text-text-muted uppercase">EXPERIENCE</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-text-primary">7</span>
+<span class="font-label-md text-label-md text-text-secondary">년차</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted">공인중개사 실무</span>
+</div>
+<div class="p-4 rounded-xl bg-white shadow-sm flex flex-col gap-1">
+<span class="font-label-tech text-label-tech text-secondary uppercase">SUBSCRIBERS</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-secondary">1.65</span>
+<span class="font-label-md text-label-md text-secondary">만명+</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted">유튜브 「JP이야기」</span>
+</div>
+<div class="p-4 rounded-xl bg-white shadow-sm flex flex-col gap-1">
+<span class="font-label-tech text-label-tech text-text-muted uppercase">ARCHIVED TOUR</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-text-primary">2,500</span>
+<span class="font-label-md text-label-md text-text-secondary">개+</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted">누적 영상 콘텐츠</span>
+</div>
+<div class="p-4 rounded-xl bg-white shadow-sm flex flex-col gap-1">
+<span class="font-label-tech text-label-tech text-status-verified uppercase">DIRECT AUDIT</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-status-verified">100</span>
+<span class="font-label-md text-label-md text-status-verified">%</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted">대표 1인 전담 책임제</span>
+</div>
+</div>
+</div>
+<!-- Hero Visual Showcase -->
+<div class="lg:col-span-5 relative">
+<!-- Decorative backing frame -->
+<div class="absolute -inset-4 bg-gradient-to-tr from-surface-slate-subtle to-tech-blue-soft rounded-2xl transform -rotate-1"></div>
+<div class="relative bg-white rounded-2xl p-4 shadow-xl flex flex-col gap-4">
+<!-- Agent Visual Container -->
+<div class="relative aspect-[4/4.5] rounded-xl overflow-hidden bg-navy-deep">
+<img alt="임재필 대표 공인중개사" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZow2ASSvOWr6TaQwIJtxKuhhjhEA2Q99rWzmR713f7pFYbLbgn2gatvnT5b5oG3p5w6DBCQXys5kr_NPcznaZdoW1IzBwcJJ7BFENONhhNI9TZaNIatWmiRFTN4OMw3dL3Z880F447u0KH_Xe8QOgUDUGv196naNTr3NR6FzeFWRtZRro0jrjwlCgXVs7ON5VqIolILgPtM6rktDRNDFRufWz4sDLrYKx1MPvOvZaCz3WGdHoKM29RQ"/>
+<!-- Live Video/Drone Watermark Badges -->
+<div class="absolute top-3 left-3 flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-navy-deep/85 backdrop-blur-md text-white font-label-tech text-label-tech flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                  UHD 4K DRONE
+                </span>
+<span class="px-2.5 py-1 rounded bg-status-verified/90 text-white font-label-tech text-label-tech">
+                  LICENSED AGENT
+                </span>
+</div>
+<!-- Lower Floating Identification Banner -->
+<div class="absolute bottom-3 inset-x-3 p-3.5 rounded-lg bg-navy-deep/90 backdrop-blur-md text-white flex items-center justify-between">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md tracking-tight">임재필 대표</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-navy-light text-border-strong">공인중개사</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted">월드원공인중개사사무소 대표</p>
+</div>
+<div class="text-right">
+<span class="font-label-tech text-label-tech text-secondary-fixed block">KANGNAM OFFICE</span>
+<span class="font-label-sm text-label-sm text-border-strong">등록 11680-2023-00498</span>
+</div>
+</div>
+</div>
+<!-- Fast Contact Bar under Hero Visual -->
+<div class="p-3.5 rounded-xl bg-surface-slate-subtle flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-navy-deep flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+</div>
+<div>
+<span class="font-label-tech text-label-tech text-text-muted block">DIRECT HOTLINE</span>
+<span class="font-headline-md text-headline-md text-text-primary font-bold">010-3848-5949</span>
+</div>
+</div>
+<a class="px-4 py-2 rounded-lg bg-navy-deep text-white hover:bg-navy-light font-label-sm text-label-sm transition-colors" href="tel:010-3848-5949">
+                즉시 전화연결
+              </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: ABOUT FOUNDER (대표 소개) -->
+<section class="py-20 lg:py-28 bg-white relative" id="about">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Section Tag & Heading -->
+<div class="flex flex-col gap-3 max-w-3xl mb-16">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-tech text-label-tech text-text-secondary uppercase">FOUNDER &amp; PHILOSOPHY</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-text-primary tracking-tight">
+          1인 책임 중개사무소,<br/>
+          처음부터 끝까지 대표가 직접 함께합니다
+        </h2>
+<p class="font-body-md text-body-md text-text-secondary">
+          담당 직원이 바뀌며 겪는 소통 누락과 오해를 원천 차단합니다. JP이야기는 임재필 대표가 모든 현장과 법률 서류를 100% 직접 검토합니다.
+        </p>
+</div>
+<!-- Grid Bento for Philosophy -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Bento 1: 1인 전담 신뢰 -->
+<div class="p-8 rounded-2xl bg-surface-canvas shadow-sm flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 rounded-xl bg-navy-deep flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[26px]">person_pin</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary">1인 책임 중개 원칙</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              JP이야기는 1인 사무소이므로 상담, 매물 안내, 권리분석, 계약 체결, 촬영과 콘텐츠 제작을 임재필 대표가 직접 맡습니다. 고객은 처음 문의부터 모든 잔금과 입주 절차가 끝날 때까지 단 한 명의 담당자와 투명하고 신뢰 깊은 소통을 유지합니다.
+            </p>
+</div>
+<div class="pt-4 flex items-center gap-2 font-label-tech text-label-tech text-text-primary">
+<span class="material-symbols-outlined text-status-verified text-[18px]">verified</span>
+<span>중개사고 제로 지향 1:1 전담제</span>
+</div>
+</div>
+<!-- Bento 2: 7년차 실무와 권리분석 -->
+<div class="p-8 rounded-2xl bg-surface-canvas shadow-sm flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 rounded-xl bg-tech-blue-soft text-navy-deep flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">policy</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary">7년차 실무 &amp; 정밀 권리분석</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              공인중개사 실무 7년차의 누적된 시장 분석 역량과 정밀한 권리분석 노하우를 바탕으로 거래의 안정성을 최우선으로 확보합니다. 등기부등본, 건축물대장, 토지이용계획확인원 등 법정 공부의 철저한 사전 크로스체크를 직접 진행합니다.
+            </p>
+</div>
+<div class="pt-4 flex items-center gap-2 font-label-tech text-label-tech text-text-primary">
+<span class="material-symbols-outlined text-status-verified text-[18px]">gavel</span>
+<span>공인중개사법 표준 규정 엄수</span>
+</div>
+</div>
+<!-- Bento 3: 드론 IT 장비와 투명성 -->
+<div class="p-8 rounded-2xl bg-surface-canvas shadow-sm flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 rounded-xl bg-media-accent-soft text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">videocam</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary">드론 &amp; 실물 영상 투어</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              초광각 짐벌 카메라와 전문 드론 항공 촬영 장비를 자체 운용하여 현장의 입지, 조망, 일조권, 진입로를 실감 나게 기록합니다. 시세 상승이나 과장된 투자 수익을 절대 약속하지 않으며, 오직 현장에서 육안과 장비로 확인된 객관적 사실만을 전달합니다.
+            </p>
+</div>
+<div class="pt-4 flex items-center gap-2 font-label-tech text-label-tech text-secondary">
+<span class="material-symbols-outlined text-[18px]">youtube_activity</span>
+<span>2,500+ 현장 검증 영상 아카이브</span>
+</div>
+</div>
+</div>
+<!-- Trust Quote Strip -->
+<div class="mt-12 p-6 rounded-2xl bg-navy-deep text-white flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-navy-light flex items-center justify-center shrink-0 text-secondary-fixed">
+<span class="material-symbols-outlined text-[24px]">format_quote</span>
+</div>
+<div>
+<p class="font-headline-md text-headline-md tracking-tight">"시세 상승이나 무리한 대출, 투자 수익을 거짓 포장하지 않습니다."</p>
+<p class="font-body-sm text-body-sm text-text-muted">오직 고객의 안전한 자산 형성과 거래 안정성만을 위해 팩트 기반으로 브리핑합니다.</p>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-3">
+<span class="px-3 py-1.5 rounded-lg bg-navy-light text-border-strong font-label-tech text-label-tech">
+            REPRESENTATIVE BROKER
+          </span>
+<span class="font-headline-md text-headline-md">임재필</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: CORE SERVICES (핵심 사업 영역 7대 서비스) -->
+<section class="py-20 lg:py-28 bg-surface-canvas relative" id="services">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+<div class="flex flex-col gap-3 max-w-2xl">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-navy-deep"></span>
+<span class="font-label-tech text-label-tech text-text-secondary uppercase">CORE BUSINESS SPECIALTIES</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-text-primary tracking-tight">
+            JP이야기 핵심 사업 영역
+          </h2>
+<p class="font-body-md text-body-md text-text-secondary">
+            중개부터 고화질 드론 영상 제작, 신축 분양 브리핑까지 현장과 미디어가 결합된 7가지 전문 서비스를 제공합니다.
+          </p>
+</div>
+<div class="shrink-0 flex items-center gap-2">
+<span class="px-3.5 py-1.5 rounded-full bg-white shadow-sm font-label-tech text-label-tech text-text-secondary">
+            TOTAL 7 CORE PILLARS
+          </span>
+</div>
+</div>
+<!-- 7 Services Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Service 1: 유튜브 채널 운영 -->
+<div class="p-8 rounded-2xl bg-white shadow-sm flex flex-col justify-between gap-6 group hover:-translate-y-1 transition-all">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-label-tech text-label-tech px-2.5 py-1 rounded bg-media-accent-soft text-secondary font-semibold">01. MEDIA CHANNEL</span>
+<span class="material-symbols-outlined text-secondary text-[24px]">smart_display</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary group-hover:text-secondary transition-colors">부동산 유튜브 채널 운영</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              부동산 정보를 찾는 일반 시청자와 투자자를 위해 분양 현장, 매물 실물, 건축 사례를 고화질 일반 영상과 숏폼으로 생생하게 제작·배포합니다.
+            </p>
+</div>
+<div class="pt-4 flex items-center justify-between font-label-sm text-label-sm text-text-muted">
+<span>대상: 투자자 &amp; 일반 시청자</span>
+<span class="font-label-tech text-label-tech text-secondary">16.5K FANS</span>
+</div>
+</div>
+<!-- Service 2: 부동산 중개 및 컨설팅 -->
+<div class="p-8 rounded-2xl bg-white shadow-sm flex flex-col justify-between gap-6 group hover:-translate-y-1 transition-all">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-label-tech text-label-tech px-2.5 py-1 rounded bg-tech-blue-soft text-navy-deep font-semibold">02. BROKERAGE</span>
+<span class="material-symbols-outlined text-navy-deep text-[24px]">real_estate_agent</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary group-hover:text-navy-deep transition-colors">부동산 중개 및 컨설팅</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              중개대상물 심층 탐색, 현장 동행 안내, 계약 진행과 거래 조건 정밀 검토 상담까지 공인중개사법에 따른 안전한 중개 및 자문 솔루션을 제공합니다.
+            </p>
+</div>
+<div class="pt-4 flex items-center justify-between font-label-sm text-label-sm text-text-muted">
+<span>대상: 매도·매수 &amp; 임대차 고객</span>
+<span class="font-label-tech text-label-tech text-status-verified">VERIFIED AGENT</span>
+</div>
+</div>
+<!-- Service 3: 부동산 분양 현장 영상 제작 -->
+<div class="p-8 rounded-2xl bg-white shadow-sm flex flex-col justify-between gap-6 group hover:-translate-y-1 transition-all">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-label-tech text-label-tech px-2.5 py-1 rounded bg-surface-slate-subtle text-text-primary font-semibold">03. VIDEO PRODUCTION</span>
+<span class="material-symbols-outlined text-text-primary text-[24px]">videocam</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary group-hover:text-secondary transition-colors">분양 현장 영상 제작 납품</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              분양 관계자와 시행사를 위한 맞춤형 견본주택 내부 투어 및 주변 교통·학군·상권 입지를 아우르는 드론 항공 홍보 영상을 촬영·편집 납품합니다.
+            </p>
+</div>
+<div class="pt-4 flex items-center justify-between font-label-sm text-label-sm text-text-muted">
+<span>대상: 분양사·시행사·공인중개사</span>
+<span class="font-label-tech text-label-tech text-text-primary">DRONE 4K UHD</span>
+</div>
+</div>
+<!-- Service 4: 부동산 매매 및 임대차 전반 -->
+<div class="p-8 rounded-2xl bg-white shadow-sm flex flex-col justify-between gap-6 group hover:-translate-y-1 transition-all">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-label-tech text-label-tech px-2.5 py-1 rounded bg-surface-slate-subtle text-text-primary font-semibold">04. TRANSACTION</span>
+<span class="material-symbols-outlined text-text-primary text-[24px]">apartment</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary group-hover:text-navy-deep transition-colors">부동산 매매 및 임대 원스톱</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              아파트, 오피스텔, 빌라, 상가, 사무실, 토지 등 모든 주거·상업용 부동산의 매물 접수부터 계약서 날인, 등기 잔금까지 전 과정을 책임 중개합니다.
+            </p>
+</div>
+<div class="pt-4 flex items-center justify-between font-label-sm text-label-sm text-text-muted">
+<span>대상: 매도인/매수인/임대인/임차인</span>
+<span class="font-label-tech text-label-tech text-text-primary">FULL CYCLE</span>
+</div>
+</div>
+<!-- Service 5: 신축 분양 현장 안내 -->
+<div class="p-8 rounded-2xl bg-white shadow-sm flex flex-col justify-between gap-6 group hover:-translate-y-1 transition-all">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-label-tech text-label-tech px-2.5 py-1 rounded bg-tech-blue-soft text-navy-deep font-semibold">05. NEW PROPERTY GUIDE</span>
+<span class="material-symbols-outlined text-navy-deep text-[24px]">domain_add</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary group-hover:text-secondary transition-colors">신축 분양 현장 안내 &amp; 동행</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              신축 분양 물건을 모색하는 고객을 위한 객관적 분양 조건 비교, 청약 요건 안내, 현장 모델하우스 동행 브리핑을 투명하게 지원합니다.
+            </p>
+</div>
+<div class="pt-4 flex items-center justify-between font-label-sm text-label-sm text-text-muted">
+<span>대상: 신축 실수요자 &amp; 자산가</span>
+<span class="font-label-tech text-label-tech text-navy-deep">ON-SITE TOUR</span>
+</div>
+</div>
+<!-- Service 6: 내집마련 맞춤 컨설팅 -->
+<div class="p-8 rounded-2xl bg-white shadow-sm flex flex-col justify-between gap-6 group hover:-translate-y-1 transition-all">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-label-tech text-label-tech px-2.5 py-1 rounded bg-media-accent-soft text-secondary font-semibold">06. HOME CONSULTING</span>
+<span class="material-symbols-outlined text-secondary text-[24px]">home</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary group-hover:text-secondary transition-colors">내집마련 생애주기 컨설팅</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              처음 집을 마련하려는 청년·신혼부부·실수요자의 자금 여력과 예산, 직장 동선, 선호 학군에 최적화된 맞춤형 부동산 취득 로드맵을 설계합니다.
+            </p>
+</div>
+<div class="pt-4 flex items-center justify-between font-label-sm text-label-sm text-text-muted">
+<span>대상: 무주택 실수요자</span>
+<span class="font-label-tech text-label-tech text-secondary">BUDGET MATCH</span>
+</div>
+</div>
+<!-- Service 7: 공인중개사 유튜브 협업 (Highlight Full width or 3rd span) -->
+<div class="p-8 rounded-2xl bg-navy-deep text-white shadow-md flex flex-col justify-between gap-6 md:col-span-2 lg:col-span-3">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+<div class="lg:col-span-8 flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="font-label-tech text-label-tech px-2.5 py-1 rounded bg-navy-light text-secondary-fixed font-semibold">07. B2B PARTNERSHIP</span>
+<span class="text-status-verified font-label-tech text-label-tech">BROKER-TO-BROKER NETWORK</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg tracking-tight">공인중개사 유튜브 촬영 &amp; 공동중개 협업</h3>
+<p class="font-body-sm text-body-sm text-text-muted leading-relaxed max-w-2xl">
+                동료 공인중개사님의 우수 전속 매물을 고화질 유튜브 영상과 드론 항공뷰로 제작해 드립니다. 영상 제작 납품은 물론 16.5만 채널을 연계한 공동중개 제휴로 빠른 매칭 성사를 이끕니다.
+              </p>
+</div>
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
+<a class="px-5 py-3 rounded-lg bg-secondary hover:bg-media-accent-hover text-white text-center font-label-md text-label-md transition-colors flex items-center justify-center gap-2" href="#inquiry">
+<span class="material-symbols-outlined text-[18px]">handshake</span>
+<span>촬영 및 공동중개 제휴 신청</span>
+</a>
+<span class="text-center font-label-tech text-label-tech text-text-muted">
+                매물 촬영 일정 협의 가능 · 강남 및 수도권 전역
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: TARGET CLIENT SOLUTIONS (고객별 맞춤 솔루션) -->
+<section class="py-20 lg:py-28 bg-white relative">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Section Title -->
+<div class="text-center max-w-2xl mx-auto mb-16 flex flex-col gap-3">
+<span class="font-label-tech text-label-tech text-secondary uppercase">TAILORED WORKFLOW</span>
+<h2 class="font-headline-xl text-headline-xl text-text-primary tracking-tight">
+          고객 유형별 맞춤 솔루션
+        </h2>
+<p class="font-body-md text-body-md text-text-secondary">
+          JP이야기는 고객의 필요에 맞추어 명확하게 구분된 전문 업무 라인업을 가동합니다.
+        </p>
+</div>
+<!-- Dual Card Architecture -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Solution Card A: 공인중개사 & 분양 관계자 -->
+<div class="p-8 lg:p-10 rounded-2xl bg-surface-canvas shadow-sm flex flex-col justify-between gap-8">
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between pb-6 border-b border-border-subtle">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-navy-deep flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[24px]">business_center</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-text-primary">공인중개사 &amp; 분양 관계자</h3>
+<span class="font-label-tech text-label-tech text-text-muted">FOR AGENTS &amp; DEVELOPERS</span>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-tech-blue-soft text-navy-deep font-label-tech text-label-tech">B2B CO-WORK</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              보유 매물의 마케팅 파워가 부족하거나 생생한 현장감을 담아내고 싶은 중개사무소 및 분양 홍보관을 위한 미디어 중개 파트너십입니다.
+            </p>
+<!-- List items -->
+<ul class="flex flex-col gap-3.5">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-text-primary"><strong>보유 매물 영상 제작:</strong> 실내 짐벌 워크스루 및 드론 항공 촬영·자막 편집 납품</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-text-primary"><strong>분양 현장 입지 영상:</strong> 견본주택과 주변 교통·개발 호재를 집약한 홍보 콘텐츠 제작</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-text-primary"><strong>유튜브 채널 연계 공동중개:</strong> 16.5K 구독자 타깃 매물 노출 및 안전한 공동계약 체결</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-text-primary"><strong>촬영 일정 및 기획 컨설팅:</strong> 현장별 최적 촬영 시간대(채광, 날씨) 및 콘티 사전 조율</span>
+</li>
+</ul>
+</div>
+<div class="pt-6 border-t border-border-subtle flex items-center justify-between">
+<span class="font-label-tech text-label-tech text-text-muted">CONSULTATION / ESTIMATE</span>
+<a class="px-5 py-2.5 rounded-lg bg-navy-deep text-white hover:bg-navy-light font-label-md text-label-md transition-colors flex items-center gap-1.5" href="#inquiry">
+<span>촬영 &amp; 협업 문의</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Solution Card B: 일반 투자자 & 실수요자 -->
+<div class="p-8 lg:p-10 rounded-2xl bg-surface-canvas shadow-sm flex flex-col justify-between gap-8">
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between pb-6 border-b border-border-subtle">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[24px]">family_restroom</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-text-primary">일반 투자자 &amp; 실수요자</h3>
+<span class="font-label-tech text-label-tech text-text-muted">FOR BUYERS &amp; INVESTORS</span>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-media-accent-soft text-secondary font-label-tech text-label-tech">B2C PRIVATE</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              복잡하고 불안한 부동산 거래 시장에서 허위매물 없는 정직한 현장 데이터와 공인중개사의 법적 보호 아래 자산을 거래합니다.
+            </p>
+<!-- List items -->
+<ul class="flex flex-col gap-3.5">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-status-verified text-[20px] shrink-0 mt-0.5">verified</span>
+<span class="font-body-sm text-body-sm text-text-primary"><strong>안심 매매·임대차 중개:</strong> 아파트·오피스텔·빌라·상가 전수 조사 및 실물 검증 투어</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-status-verified text-[20px] shrink-0 mt-0.5">verified</span>
+<span class="font-body-sm text-body-sm text-text-primary"><strong>1:1 내집마련 맞춤 컨설팅:</strong> 실가용 자금 기반 주거 입지 선정 및 실거래가 기반 적정 매수가 분석</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-status-verified text-[20px] shrink-0 mt-0.5">verified</span>
+<span class="font-body-sm text-body-sm text-text-primary"><strong>신축 분양 객관적 브리핑:</strong> 현장 방문 동행 및 과대광고 필터링을 거친 객관적 조건 분석</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-status-verified text-[20px] shrink-0 mt-0.5">verified</span>
+<span class="font-body-sm text-body-sm text-text-primary"><strong>전문가 연계 지원:</strong> 취득세·양도세 세무사 및 소유권이전 법무사 정직한 연계망 안내</span>
+</li>
+</ul>
+</div>
+<div class="pt-6 border-t border-border-subtle flex items-center justify-between">
+<span class="font-label-tech text-label-tech text-text-muted">1:1 DIRECT COUNSELING</span>
+<a class="px-5 py-2.5 rounded-lg bg-secondary text-white hover:bg-media-accent-hover font-label-md text-label-md transition-colors flex items-center gap-1.5" href="#inquiry">
+<span>내집마련·매물상담 신청</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: 7-STEP PROCESS (투명한 7단계 업무 진행 프로세스) -->
+<section class="py-20 lg:py-28 bg-navy-deep text-white relative" id="process">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Section Tag -->
+<div class="flex flex-col gap-3 max-w-3xl mb-16">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-status-verified"></span>
+<span class="font-label-tech text-label-tech text-border-strong uppercase">SYSTEMATIC TRANSACTION PROTOCOL</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-primary tracking-tight">
+          투명한 7단계 책임 진행 프로세스
+        </h2>
+<p class="font-body-md text-body-md text-text-muted">
+          JP이야기는 최초 상담부터 최종 잔금 정산 및 열쇠 인계까지 엄격한 표준 절차에 따라 임재필 대표가 직접 진행합니다.
+        </p>
+</div>
+<!-- Horizontal / Vertical Responsive Process Stepper -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-4">
+<!-- Step 1 -->
+<div class="p-5 rounded-xl bg-navy-light/60 flex flex-col justify-between gap-4 relative">
+<div class="flex items-center justify-between">
+<span class="font-label-tech text-label-tech px-2 py-0.5 rounded bg-navy-light text-border-strong">STEP 01</span>
+<span class="material-symbols-outlined text-text-muted text-[20px]">contact_phone</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-primary text-[18px] mb-1">신규 문의 접수</h4>
+<p class="font-body-sm text-body-sm text-text-muted">전화, 카카오톡, 온라인 폼을 통한 고객 요구사항 1:1 청취</p>
+</div>
+<div class="text-[12px] font-label-tech text-text-muted">PRE-BRIEFING</div>
+</div>
+<!-- Step 2 -->
+<div class="p-5 rounded-xl bg-navy-light/60 flex flex-col justify-between gap-4 relative">
+<div class="flex items-center justify-between">
+<span class="font-label-tech text-label-tech px-2 py-0.5 rounded bg-navy-light text-border-strong">STEP 02</span>
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">videocam</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-primary text-[18px] mb-1">현장 안내 &amp; 브리핑</h4>
+<p class="font-body-sm text-body-sm text-text-muted">사전 영상 및 드론 뷰 검토 후 대표 직접 현장 동행 답사</p>
+</div>
+<div class="text-[12px] font-label-tech text-text-muted">SITE VISIT</div>
+</div>
+<!-- Step 3 -->
+<div class="p-5 rounded-xl bg-navy-light/60 flex flex-col justify-between gap-4 relative">
+<div class="flex items-center justify-between">
+<span class="font-label-tech text-label-tech px-2 py-0.5 rounded bg-navy-light text-border-strong">STEP 03</span>
+<span class="material-symbols-outlined text-status-verified text-[20px]">fact_check</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-primary text-[18px] mb-1">권리분석 &amp; 검토</h4>
+<p class="font-body-sm text-body-sm text-text-muted">등기부, 대장, 제한물권 등 거래 안전성 법정 정밀 심층 검증</p>
+</div>
+<div class="text-[12px] font-label-tech text-text-muted">LEGAL AUDIT</div>
+</div>
+<!-- Step 4 -->
+<div class="p-5 rounded-xl bg-navy-light/60 flex flex-col justify-between gap-4 relative">
+<div class="flex items-center justify-between">
+<span class="font-label-tech text-label-tech px-2 py-0.5 rounded bg-navy-light text-border-strong">STEP 04</span>
+<span class="material-symbols-outlined text-text-muted text-[20px]">history_edu</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-primary text-[18px] mb-1">계약서 작성</h4>
+<p class="font-body-sm text-body-sm text-text-muted">공인중개사 입회 하에 특약사항 및 설명서 정밀 대조 날인</p>
+</div>
+<div class="text-[12px] font-label-tech text-text-muted">CONTRACT</div>
+</div>
+<!-- Step 5 -->
+<div class="p-5 rounded-xl bg-navy-light/60 flex flex-col justify-between gap-4 relative">
+<div class="flex items-center justify-between">
+<span class="font-label-tech text-label-tech px-2 py-0.5 rounded bg-navy-light text-border-strong">STEP 05</span>
+<span class="material-symbols-outlined text-text-muted text-[20px]">account_balance</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-primary text-[18px] mb-1">계약금 안전 입금</h4>
+<p class="font-body-sm text-body-sm text-text-muted">소유자 본인 계좌 및 거래 안전 장치 확인 후 입금 진행</p>
+</div>
+<div class="text-[12px] font-label-tech text-text-muted">ESCROW/PAY</div>
+</div>
+<!-- Step 6 -->
+<div class="p-5 rounded-xl bg-navy-light/60 flex flex-col justify-between gap-4 relative">
+<div class="flex items-center justify-between">
+<span class="font-label-tech text-label-tech px-2 py-0.5 rounded bg-navy-light text-border-strong">STEP 06</span>
+<span class="material-symbols-outlined text-text-muted text-[20px]">sync</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-primary text-[18px] mb-1">중도금 &amp; 권리변동</h4>
+<p class="font-body-sm text-body-sm text-text-muted">중도금 납입 시점 추가 등기부 열람을 통한 권리 변동 재확인</p>
+</div>
+<div class="text-[12px] font-label-tech text-text-muted">RE-VERIFICATION</div>
+</div>
+<!-- Step 7 -->
+<div class="p-5 rounded-xl bg-secondary/90 flex flex-col justify-between gap-4 relative shadow-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-tech text-label-tech px-2 py-0.5 rounded bg-white text-secondary font-bold">STEP 07</span>
+<span class="material-symbols-outlined text-white text-[20px]">key</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-white text-[18px] mb-1">잔금 정산 &amp; 완료</h4>
+<p class="font-body-sm text-body-sm text-white/90">공과금 정산, 영수증 확인, 소유권 이전 및 입주 완료</p>
+</div>
+<div class="text-[12px] font-label-tech text-white/80">HANDOVER DONE</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: CORE PRINCIPLES (JP이야기 4대 소통 원칙) -->
+<section class="py-20 lg:py-28 bg-white relative">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left info -->
+<div class="lg:col-span-5 flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-tech text-label-tech text-text-secondary uppercase">TRANSPARENCY STANDARD</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-text-primary tracking-tight">
+            JP이야기<br/>
+            4대 클린 소통 원칙
+          </h2>
+<p class="font-body-md text-body-md text-text-secondary">
+            부동산 중개와 컨설팅에서 흔히 겪는 왜곡된 기대와 불신을 해소하기 위해 JP이야기는 명문화된 4가지 소통 강령을 철저히 지킵니다.
+          </p>
+<div class="p-5 rounded-xl bg-surface-slate-subtle mt-4 flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-[32px]">shield</span>
+<div>
+<span class="font-headline-md text-headline-md text-text-primary block text-[17px]">소비자 권익 및 신뢰 보호</span>
+<span class="font-body-sm text-body-sm text-text-secondary">공인중개사법상 표시·광고 명시의무 100% 준수</span>
+</div>
+</div>
+</div>
+<!-- Right 4 Principles Cards -->
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+<!-- Principle 1 -->
+<div class="p-6 rounded-2xl bg-surface-canvas shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-full bg-navy-deep text-white flex items-center justify-center font-label-tech text-label-tech">01</span>
+<span class="material-symbols-outlined text-status-verified text-[22px]">check_circle</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary text-[19px]">확인된 사실만 안내</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              JP이야기는 공적 장부와 현장 조사를 거쳐 확인된 정보만 명확히 안내하며, 확인되지 않은 미확정 사항은 사실 확인 후 투명하게 다시 안내합니다.
+            </p>
+</div>
+<!-- Principle 2 -->
+<div class="p-6 rounded-2xl bg-surface-canvas shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center font-label-tech text-label-tech">02</span>
+<span class="material-symbols-outlined text-secondary text-[22px]">block</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary text-[19px]">과장 및 확정적 약속 금지</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              시세 상승, 미래 투자 수익률, 금융기관 대출 승인 및 특정 분양 결과를 자의적으로 보장하거나 과장하여 약속하지 않습니다.
+            </p>
+</div>
+<!-- Principle 3 -->
+<div class="p-6 rounded-2xl bg-surface-canvas shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-full bg-navy-light text-white flex items-center justify-center font-label-tech text-label-tech">03</span>
+<span class="material-symbols-outlined text-navy-deep text-[22px]">account_balance_wallet</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary text-[19px]">서비스 분리 &amp; 비용 투명화</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              법정 부동산 중개, 맞춤형 컨설팅, 미디어 영상 촬영 협업을 서로 명확히 구분하여 서비스마다 적용 범위와 보수·비용을 사전에 설명합니다.
+            </p>
+</div>
+<!-- Principle 4 -->
+<div class="p-6 rounded-2xl bg-surface-canvas shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-full bg-border-strong text-navy-deep flex items-center justify-center font-label-tech text-label-tech">04</span>
+<span class="material-symbols-outlined text-text-primary text-[22px]">group</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary text-[19px]">공인 전문 영역 연계 원칙</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              복잡한 세무 계산, 대출 자격 심사, 분쟁 법률 판단 등 고도의 전문 분야는 자의적 유권해석을 지양하고 공인 전문가(세무사·법무사 등)를 연계합니다.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: OFFICIAL CHANNELS & MEDIA (공식 채널 바로가기) -->
+<section class="py-20 lg:py-28 bg-surface-canvas relative" id="channels">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Section Heading -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+<div class="flex flex-col gap-3 max-w-2xl">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-tech text-label-tech text-text-secondary uppercase">DIGITAL FOOTPRINT &amp; SOCIALS</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-text-primary tracking-tight">
+            공식 채널 및 실시간 미디어
+          </h2>
+<p class="font-body-md text-body-md text-text-secondary">
+            언제 어디서나 유튜브, 네이버 블로그, 인스타그램을 통해 JP이야기의 최신 매물 브리핑과 부동산 인사이트를 확인하실 수 있습니다.
+          </p>
+</div>
+<div class="shrink-0">
+<span class="font-label-tech text-label-tech text-secondary font-semibold">16.5K COMMUNITY</span>
+</div>
+</div>
+<!-- Channel Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Channel 1: YouTube (Highlighted Card) -->
+<div class="p-8 rounded-2xl bg-white shadow-sm flex flex-col justify-between gap-6 relative overflow-hidden group hover:shadow-lg transition-all">
+<div class="absolute top-0 right-0 w-24 h-24 bg-media-accent-soft rounded-bl-full flex items-start justify-end p-4">
+<span class="material-symbols-outlined text-secondary text-[28px]">smart_display</span>
+</div>
+<div class="flex flex-col gap-3 relative z-10">
+<span class="px-2.5 py-1 rounded bg-secondary text-white font-label-tech text-label-tech w-fit">MAIN CHANNEL</span>
+<h3 class="font-headline-md text-headline-md text-text-primary">유튜브 「JP이야기」</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              분양 현장, 견본주택, 실물 매물 실시간 투어와 드론 조망 영상 2,500여 개가 등록된 부동산 전문 공식 채널입니다.
+            </p>
+<div class="flex items-center gap-4 pt-2 font-label-tech text-label-tech text-text-secondary">
+<span>구독자 1.65만명</span>
+<span>•</span>
+<span>영상 2,500개+</span>
+</div>
+</div>
+<a class="w-full py-3 rounded-lg bg-secondary hover:bg-media-accent-hover text-white text-center font-label-md text-label-md transition-colors flex items-center justify-center gap-2" href="https://www.youtube.com/@%EA%B0%95%EB%82%A8%EA%B3%B5%EC%9D%B8%EC%A4%91%EA%B0%9C%EC%82%AC" rel="noreferrer" target="_blank">
+<span>유튜브 바로가기</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+<!-- Channel 2: Naver Blog -->
+<div class="p-8 rounded-2xl bg-white shadow-sm flex flex-col justify-between gap-6 group hover:shadow-lg transition-all">
+<div class="flex flex-col gap-3">
+<div class="w-10 h-10 rounded-lg bg-tech-blue-soft flex items-center justify-center text-status-verified font-headline-md text-headline-md">
+<span class="material-symbols-outlined text-[24px]">article</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary">네이버 공식 블로그</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              상세 권리분석 리포트, 현장 사진, 매물 제원표, 공인중개사 실무 7년차의 심층 칼럼을 글로 읽는 부동산 아카이브입니다.
+            </p>
+<span class="font-label-tech text-label-tech text-text-muted pt-2">blog.naver.com/jopd2737</span>
+</div>
+<a class="w-full py-3 rounded-lg bg-surface-slate-subtle hover:bg-navy-deep hover:text-white text-text-primary text-center font-label-md text-label-md transition-colors flex items-center justify-center gap-2" href="https://blog.naver.com/jopd2737" rel="noreferrer" target="_blank">
+<span>블로그 방문하기</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+<!-- Channel 3: Instagram -->
+<div class="p-8 rounded-2xl bg-white shadow-sm flex flex-col justify-between gap-6 group hover:shadow-lg transition-all">
+<div class="flex flex-col gap-3">
+<div class="w-10 h-10 rounded-lg bg-media-accent-soft flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">photo_camera</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary">공식 인스타그램</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              현장 답사 릴스, 주요 분양 현장의 감각적인 스틸컷과 실시간 임장 일상을 모바일 환경에서 빠르게 만나보실 수 있습니다.
+            </p>
+<span class="font-label-tech text-label-tech text-text-muted pt-2">@jp_lim2737</span>
+</div>
+<a class="w-full py-3 rounded-lg bg-surface-slate-subtle hover:bg-navy-deep hover:text-white text-text-primary text-center font-label-md text-label-md transition-colors flex items-center justify-center gap-2" href="https://www.instagram.com/jp_lim2737" rel="noreferrer" target="_blank">
+<span>인스타그램 팔로우</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+<!-- Channel 4: Naver Smart Place -->
+<div class="p-8 rounded-2xl bg-white shadow-sm flex flex-col justify-between gap-6 group hover:shadow-lg transition-all">
+<div class="flex flex-col gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-slate-subtle flex items-center justify-center text-navy-deep">
+<span class="material-symbols-outlined text-[24px]">location_on</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary">네이버 스마트플레이스</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              강남구 봉은사로 129 거평타운 1501호 사무실 위치 확인, 길찾기, 고객 리뷰와 방문 전 오시는 길을 안내합니다.
+            </p>
+<span class="font-label-tech text-label-tech text-text-muted pt-2">월드원공인중개사사무소</span>
+</div>
+<a class="w-full py-3 rounded-lg bg-surface-slate-subtle hover:bg-navy-deep hover:text-white text-text-primary text-center font-label-md text-label-md transition-colors flex items-center justify-center gap-2" href="https://naver.me/F42TfHBr" rel="noreferrer" target="_blank">
+<span>지도 &amp; 플레이스 확인</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+<!-- Channel 5: KakaoTalk Channel (Full 2-cols or prominent) -->
+<div class="p-8 rounded-2xl bg-white shadow-sm flex flex-col justify-between gap-6 group hover:shadow-lg transition-all md:col-span-2">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-tech-blue-soft flex items-center justify-center text-navy-deep">
+<span class="material-symbols-outlined text-[24px]">chat</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-tech-blue-soft text-navy-deep font-label-tech text-label-tech">1:1 DIRECT CHAT</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary">카카오톡 채널 「월드원 공인중개사사무소」</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              부담 없는 1:1 채팅으로 매물 정보 확인, 영상 제작 일정 문의, 방문 상담 예약을 편리하게 접수하실 수 있습니다. 대표가 직접 순차 답변 드립니다.
+            </p>
+<span class="font-label-tech text-label-tech text-text-muted pt-2">pf.kakao.com/_RhKwG</span>
+</div>
+<div class="flex items-center gap-4">
+<a class="flex-1 py-3 rounded-lg bg-navy-deep hover:bg-navy-light text-white text-center font-label-md text-label-md transition-colors flex items-center justify-center gap-2" href="http://pf.kakao.com/_RhKwG" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+<span>카카오톡 채널 추가 &amp; 실시간 채팅</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8: CONTACT & INQUIRY FORM (온라인 간편 문의 접수 폼) -->
+<section class="py-20 lg:py-28 bg-white relative" id="inquiry">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Side: Quick Hotline & Direction -->
+<div class="lg:col-span-5 flex flex-col justify-between gap-8">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-tech text-label-tech text-text-secondary uppercase">DIRECT INQUIRY</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-text-primary tracking-tight">
+              궁금한 매물이나<br/>
+              촬영 협업을 남겨주세요
+            </h2>
+<p class="font-body-md text-body-md text-text-secondary">
+              접수된 문의는 임재필 대표가 직접 확인 후 전화 또는 메신저로 신속하고 성실하게 답변 드립니다.
+            </p>
+<div class="flex flex-col gap-4 pt-4">
+<!-- Hotline card -->
+<div class="p-5 rounded-xl bg-surface-canvas flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-navy-deep flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</div>
+<div>
+<span class="font-label-tech text-label-tech text-text-muted">직통 전화 상담</span>
+<a class="font-headline-md text-headline-md text-text-primary hover:text-secondary transition-colors block" href="tel:010-3848-5949">
+                      010-3848-5949
+                    </a>
+</div>
+</div>
+<a class="px-3.5 py-2 rounded-lg bg-navy-deep text-white hover:bg-navy-light font-label-sm text-label-sm transition-colors" href="tel:010-3848-5949">
+                  통화 연결
+                </a>
+</div>
+<!-- Kakao channel card -->
+<div class="p-5 rounded-xl bg-surface-canvas flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[20px]">forum</span>
+</div>
+<div>
+<span class="font-label-tech text-label-tech text-text-muted">카카오톡 채널</span>
+<span class="font-headline-md text-headline-md text-text-primary text-[17px] block">
+                      월드원 공인중개사사무소
+                    </span>
+</div>
+</div>
+<a class="px-3.5 py-2 rounded-lg bg-secondary text-white hover:bg-media-accent-hover font-label-sm text-label-sm transition-colors" href="http://pf.kakao.com/_RhKwG" rel="noreferrer" target="_blank">
+                  채팅 접수
+                </a>
+</div>
+</div>
+</div>
+<!-- Location preview -->
+<div class="p-5 rounded-xl bg-surface-canvas flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-navy-deep text-[20px]">pin_drop</span>
+<span class="font-label-tech text-label-tech text-text-primary font-semibold">사무소 위치 안내</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary">
+              서울특별시 강남구 봉은사로 129, 거평타운 1501호<br/>
+              (9호선 신논현역 / 언주역 인근, 방문 전 사전 예약 필수)
+            </p>
+</div>
+</div>
+<!-- Right Side: The Interactive Form -->
+<div class="lg:col-span-7">
+<form class="p-8 lg:p-10 rounded-2xl bg-surface-canvas shadow-sm flex flex-col gap-6" id="contactForm" onsubmit="event.preventDefault(); document.getElementById('formSuccessModal').classList.remove('hidden');">
+<div class="flex flex-col gap-1 pb-2">
+<span class="font-headline-md text-headline-md text-text-primary">상담 및 매물 문의 접수</span>
+<p class="font-body-sm text-body-sm text-text-muted">빠른 확인 후 대표가 1:1로 직접 연락 드립니다.</p>
+</div>
+<!-- Inquiry Type Selector -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-text-primary">문의 유형을 선택해주세요 <span class="text-secondary">*</span></label>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+<label class="flex items-center gap-2 p-3 rounded-lg bg-white shadow-sm cursor-pointer hover:bg-surface-slate-subtle transition-colors">
+<input checked="" class="accent-navy-deep" name="inquiryType" type="radio" value="brokerage"/>
+<span class="font-body-sm text-body-sm text-text-primary">매매·전월세 중개</span>
+</label>
+<label class="flex items-center gap-2 p-3 rounded-lg bg-white shadow-sm cursor-pointer hover:bg-surface-slate-subtle transition-colors">
+<input class="accent-navy-deep" name="inquiryType" type="radio" value="youtube"/>
+<span class="font-body-sm text-body-sm text-text-primary">유튜브 영상 촬영</span>
+</label>
+<label class="flex items-center gap-2 p-3 rounded-lg bg-white shadow-sm cursor-pointer hover:bg-surface-slate-subtle transition-colors">
+<input class="accent-navy-deep" name="inquiryType" type="radio" value="home"/>
+<span class="font-body-sm text-body-sm text-text-primary">내집마련 컨설팅</span>
+</label>
+<label class="flex items-center gap-2 p-3 rounded-lg bg-white shadow-sm cursor-pointer hover:bg-surface-slate-subtle transition-colors">
+<input class="accent-navy-deep" name="inquiryType" type="radio" value="presale"/>
+<span class="font-body-sm text-body-sm text-text-primary">신축 분양 현장</span>
+</label>
+<label class="flex items-center gap-2 p-3 rounded-lg bg-white shadow-sm cursor-pointer hover:bg-surface-slate-subtle transition-colors">
+<input class="accent-navy-deep" name="inquiryType" type="radio" value="cooperation"/>
+<span class="font-body-sm text-body-sm text-text-primary">공인중개사 공동제휴</span>
+</label>
+<label class="flex items-center gap-2 p-3 rounded-lg bg-white shadow-sm cursor-pointer hover:bg-surface-slate-subtle transition-colors">
+<input class="accent-navy-deep" name="inquiryType" type="radio" value="other"/>
+<span class="font-body-sm text-body-sm text-text-primary">기타 일반 문의</span>
+</label>
+</div>
+</div>
+<!-- Two Col: Name and Phone -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-text-primary" for="userName">성함 (또는 상호명) <span class="text-secondary">*</span></label>
+<input class="h-12 px-4 rounded-lg bg-white text-text-primary text-body-sm focus:outline-none focus:ring-2 focus:ring-navy-deep shadow-sm" id="userName" placeholder="예: 홍길동 (또는 OO부동산)" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-text-primary" for="userPhone">연락처 <span class="text-secondary">*</span></label>
+<input class="h-12 px-4 rounded-lg bg-white text-text-primary text-body-sm focus:outline-none focus:ring-2 focus:ring-navy-deep shadow-sm" id="userPhone" placeholder="010-0000-0000" required="" type="tel"/>
+</div>
+</div>
+<!-- Target Location / Property Info -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-text-primary" for="userLocation">관심 지역 또는 매물 소재지</label>
+<input class="h-12 px-4 rounded-lg bg-white text-text-primary text-body-sm focus:outline-none focus:ring-2 focus:ring-navy-deep shadow-sm" id="userLocation" placeholder="예: 서울 강남구 역삼동 아파트, 경기 분양 현장 등" type="text"/>
+</div>
+<!-- Detailed Message -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-text-primary" for="userMessage">상세 문의 내용</label>
+<textarea class="p-4 rounded-lg bg-white text-text-primary text-body-sm focus:outline-none focus:ring-2 focus:ring-navy-deep shadow-sm resize-none" id="userMessage" placeholder="원하시는 상담 내용이나 보유 매물 특징, 촬영 희망 일정 등을 자유롭게 기재해주세요." rows="4"></textarea>
+</div>
+<!-- Privacy policy notice check -->
+<div class="flex items-center gap-2">
+<input checked="" class="accent-navy-deep w-4 h-4 cursor-pointer" id="privacyConsent" required="" type="checkbox"/>
+<label class="font-body-legal text-body-legal text-text-secondary cursor-pointer" for="privacyConsent">
+                개인정보 수집 및 상담 목적 연락 이용에 동의합니다. (목적 달성 후 즉시 파기)
+              </label>
+</div>
+<!-- Submit Button -->
+<button class="w-full py-4 rounded-lg bg-navy-deep hover:bg-navy-light text-white font-label-md text-label-md transition-all shadow-md flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>문의 내용 제출하고 상담 신청하기</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Modal For Form Submission -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-navy-deep/80 backdrop-blur-sm p-4" id="formSuccessModal">
+<div class="bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl flex flex-col items-center text-center gap-4">
+<div class="w-16 h-16 rounded-full bg-tech-blue-soft text-status-verified flex items-center justify-center">
+<span class="material-symbols-outlined text-[36px]">check_circle</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-text-primary">문의가 정상 접수되었습니다</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+        신청해주신 내용은 월드원공인중개사사무소 임재필 대표가 직접 확인한 후 기재해주신 연락처로 정성껏 안내해 드리겠습니다.
+      </p>
+<div class="pt-2 w-full">
+<button class="w-full py-3 rounded-lg bg-navy-deep text-white font-label-md text-label-md hover:bg-navy-light transition-colors" onclick="document.getElementById('formSuccessModal').classList.add('hidden'); document.getElementById('contactForm').reset();">
+          확인
+        </button>
+</div>
+</div>
+</div>
+<!-- SECTION 9: STATUTORY COMPLIANCE STRIP -->
+<section class="py-8 bg-surface-slate-subtle border-t border-border-subtle">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-status-verified text-[20px]">verified</span>
+<span class="font-body-legal text-body-legal text-text-secondary">
+          상호: <strong>월드원공인중개사사무소</strong> | 대표자: <strong>임재필</strong> | 중개사무소 등록번호: <strong>11680-2023-00498</strong>
+</span>
+</div>
+<div class="font-body-legal text-body-legal text-text-muted">
+        공인중개사법상 법정 중개대상물 확인·설명 의무 및 거래표시 광고 기준을 철저히 준수합니다.
+      </div>
+</div>
+</section>
+</div></main><footer class="w-full bg-navy-deep text-text-muted mt-space-3xl"><div class="max-w-7xl mx-auto px-6 lg:px-12 py-space-2xl"><div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-space-xl border-b border-navy-light"><div class="lg:col-span-6 flex flex-col gap-3"><div class="flex items-center gap-3"><span class="font-headline-md text-headline-md text-on-primary tracking-tight">JP이야기</span><span class="px-2.5 py-0.5 rounded-full bg-navy-light text-status-verified font-label-tech text-label-tech">VERIFIED BROKER</span></div><p class="font-body-sm text-body-sm text-text-muted max-w-xl">정직과 기술을 융합한 부동산 솔루션. 현장 드론 미디어 16.5K 구독자 채널과 7년차 공인중개사의 실무 노하우로 투명하고 검증된 부동산 거래를 이끕니다.</p></div><div class="lg:col-span-6 flex flex-col lg:items-end justify-center gap-3"><span class="font-label-tech text-label-tech tracking-wider text-text-muted uppercase">Official Networks &amp; Channels</span><div class="flex flex-wrap items-center gap-2"><a class="px-3 py-1.5 rounded-lg bg-navy-light hover:bg-secondary hover:text-on-secondary text-text-muted transition-colors font-label-sm text-label-sm flex items-center gap-1.5" href="https://www.youtube.com" rel="noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">smart_display</span>유튜브 (JP이야기)</a><a class="px-3 py-1.5 rounded-lg bg-navy-light hover:bg-surface-slate-subtle hover:text-text-primary text-text-muted transition-colors font-label-sm text-label-sm flex items-center gap-1.5" href="#" rel="noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">article</span>네이버 블로그</a><a class="px-3 py-1.5 rounded-lg bg-navy-light hover:bg-surface-slate-subtle hover:text-text-primary text-text-muted transition-colors font-label-sm text-label-sm flex items-center gap-1.5" href="#" rel="noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">photo_camera</span>인스타그램</a><a class="px-3 py-1.5 rounded-lg bg-navy-light hover:bg-surface-slate-subtle hover:text-text-primary text-text-muted transition-colors font-label-sm text-label-sm flex items-center gap-1.5" href="#" rel="noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">chat</span>카카오톡 채널</a><a class="px-3 py-1.5 rounded-lg bg-navy-light hover:bg-surface-slate-subtle hover:text-text-primary text-text-muted transition-colors font-label-sm text-label-sm flex items-center gap-1.5" href="#" rel="noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">pin_drop</span>스마트플레이스</a></div></div></div><div class="pt-space-lg flex flex-col gap-6"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-2.5 gap-x-6 font-body-legal text-body-legal text-text-muted"><div class="flex items-center gap-2"><span class="text-border-strong font-medium">상호</span><span>월드원공인중개사사무소</span></div><div class="flex items-center gap-2"><span class="text-border-strong font-medium">대표</span><span>임재필 (공인중개사, 실무 7년차)</span></div><div class="flex items-center gap-2"><span class="text-border-strong font-medium">등록번호</span><span>11680-2023-00498</span></div><div class="flex items-center gap-2 md:col-span-2 lg:col-span-1"><span class="text-border-strong font-medium">소재지</span><span>서울시 강남구 봉은사로 129, 거평타운 1501호</span></div><div class="flex items-center gap-2"><span class="text-border-strong font-medium">연락처</span><a class="text-text-muted hover:text-on-primary transition-colors" href="tel:010-3848-5949">010-3848-5949</a></div><div class="flex items-center gap-2"><span class="text-border-strong font-medium">이메일</span><a class="text-text-muted hover:text-on-primary transition-colors" href="mailto:jopd3733@nate.com">jopd3733@nate.com</a></div></div><div class="p-4 rounded-xl bg-navy-light/60 border border-navy-light flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container text-[20px] shrink-0 mt-0.5">verified_user</span><div class="flex flex-col gap-1"><span class="font-label-tech text-label-tech uppercase text-text-muted tracking-wider">Compliance &amp; Legal Assurance</span><p class="font-body-legal text-body-legal text-text-muted">JP이야기는 시세 상승, 투자 수익, 대출 승인을 약속하지 않으며 확인된 사실만을 정직하게 안내합니다.</p></div></div><div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2 font-body-legal text-body-legal text-text-muted"><p>© 2025 월드원공인중개사사무소. All rights reserved.</p><div class="flex items-center gap-6"><span class="text-border-strong">공인중개사법 및 전자상거래 표준 법정고지 준수</span></div></div></div></div></footer></body></html>

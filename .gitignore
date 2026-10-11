@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.vercel/
+.DS_Store
+Thumbs.db
+
+# 작업용 프롬프트 (로컬 보관)
+PROMPT_*.md
+
+# 로컬 도구 설정·상태
+.omc/
+.claude/

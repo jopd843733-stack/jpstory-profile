@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JP이야기 회사 소개</title>
+<meta name="description" content="JP이야기(월드원공인중개사사무소) — 영상 콘텐츠를 만드는 7년차 공인중개사의 1인 중개사무소">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@300..600,0..1&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<style>
+/* ── 디자인 토큰 (design/jp_real_estate_media/DESIGN.md) ───────────── */
+:root {
+  --navy: #0F172A;          /* primary: 헤드라인·신뢰 영역 */
+  --navy-light: #1E293B;
+  --navy-deep: #0A0F1D;     /* 법정 고지·푸터 */
+  --crimson: #E11D48;       /* secondary: 영상·미디어 전용, 화면의 10% 이내 */
+  --crimson-hover: #BE123C;
+  --crimson-soft: #FFE4E6;
+  --blue: #2563EB;          /* tertiary: 등록·검증 표시 */
+  --blue-soft: #EFF6FF;
+  --verified: #059669;
+  --canvas: #F8FAFC;
+  --card: #FFFFFF;
+  --slate-subtle: #F1F5F9;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+  --text: #0F172A;
+  --text-2: #475569;
+  --text-muted: #94A3B8;
+  --pending-bg: #FFFBEB;
+  --pending-border: #F59E0B;
+  --pending-text: #92400E;
+
+  --font-head: "Plus Jakarta Sans", "Pretendard", "Apple SD Gothic Neo", sans-serif;
+  --font-body: "Inter", "Pretendard", "Apple SD Gothic Neo", sans-serif;
+  --font-tech: "Space Grotesk", "Pretendard", monospace;
+
+  --r-sm: 0.25rem; --r: 0.5rem; --r-md: 0.75rem; --r-lg: 1rem; --r-xl: 1.5rem;
+  --shadow-rest: 0 1px 3px 0 rgba(15,23,42,.04), 0 1px 2px -1px rgba(15,23,42,.04);
+  --shadow-lift: 0 12px 24px -4px rgba(15,23,42,.08), 0 4px 6px -2px rgba(15,23,42,.03);
+  --gutter: 2rem;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body {
+  margin: 0; background: var(--canvas); color: var(--text);
+  font: 400 16px/26px var(--font-body); letter-spacing: -0.005em;
+  -webkit-font-smoothing: antialiased; word-break: keep-all;
+}
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 1280px; margin: 0 auto; padding: 0 var(--gutter); }
+.icon { font-family: "Material Symbols Outlined"; font-weight: 400; font-style: normal;
+  font-size: 22px; line-height: 1; display: inline-block; vertical-align: middle;
+  font-variation-settings: "FILL" 0, "wght" 400; }
+
+/* 타이포 */
+.h-hero { font: 800 56px/68px var(--font-head); letter-spacing: -0.02em; margin: 0; }
+.h-xl { font: 700 40px/52px var(--font-head); letter-spacing: -0.02em; margin: 0; }
+.h-lg { font: 700 32px/42px var(--font-head); letter-spacing: -0.015em; margin: 0; }
+.h-md { font: 600 22px/30px var(--font-head); letter-spacing: -0.01em; margin: 0; }
+.body-lg { font-size: 18px; line-height: 28px; }
+.body-sm { font-size: 14px; line-height: 22px; }
+.legal { font-size: 12px; line-height: 18px; }
+.tech { font: 600 12px/16px var(--font-tech); letter-spacing: 0.06em; text-transform: uppercase; }
+.muted { color: var(--text-2); }
+
+/* 버튼 */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  padding: .875rem 1.5rem; border-radius: var(--r); font: 600 14px/20px var(--font-body);
+  border: 1px solid transparent; transition: background .15s, transform .15s; cursor: pointer; }
+.btn-primary { background: var(--navy); color: #fff; }
+.btn-primary:hover { background: var(--navy-light); transform: translateY(-2px); }
+.btn-media { background: var(--crimson); color: #fff; }
+.btn-media:hover { background: var(--crimson-hover); }
+.btn-outline { background: #fff; color: var(--navy); border-color: var(--border-strong); }
+.btn-outline:hover { background: var(--slate-subtle); }
+.btn-sm { padding: .5rem 1rem; }
+
+/* 칩 */
+.chip { display: inline-flex; align-items: center; gap: .375rem; padding: .25rem .625rem;
+  border-radius: var(--r-sm); font: 600 12px/16px var(--font-tech); letter-spacing: .06em; }
+.chip-pill { border-radius: 9999px; padding: .375rem .875rem; }
+.chip-media { background: var(--crimson-soft); color: var(--crimson); }
+.chip-broker { background: var(--blue-soft); color: var(--blue); }
+.chip-tech { background: var(--navy); color: var(--canvas); }
+.chip-slate { background: var(--slate-subtle); color: var(--navy); }
+
+/* 미확정 표시 (검토용 페이지 전용) */
+.pending { display: inline-flex; align-items: center; gap: .25rem; padding: .0625rem .5rem;
+  border: 1px dashed var(--pending-border); border-radius: var(--r-sm);
+  background: var(--pending-bg); color: var(--pending-text);
+  font: 500 12px/20px var(--font-body); white-space: normal; }
+.pending::before { content: "확정 필요"; white-space: nowrap; font: 700 11px/20px var(--font-tech);
+  padding-right: .375rem; margin-right: .125rem; border-right: 1px solid #FCD34D; }
+
+/* 카드 */
+.card { background: var(--card); border: 1px solid var(--border); border-radius: var(--r-lg);
+  box-shadow: var(--shadow-rest); transition: box-shadow .2s, transform .2s, border-color .2s; }
+.card.lift:hover { box-shadow: var(--shadow-lift); transform: translateY(-4px); border-color: var(--border-strong); }
+
+/* 헤더 */
+.header { position: fixed; inset: 0 0 auto 0; z-index: 50; background: rgba(248,250,252,.9);
+  backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+.header .wrap { height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.brand { display: flex; align-items: center; gap: .75rem; }
+.brand-mark { width: 40px; height: 40px; border-radius: var(--r); background: var(--navy-deep);
+  color: #fff; display: grid; place-items: center; font: 800 18px/1 var(--font-head); letter-spacing: -0.04em; }
+.brand-name { font: 700 18px/22px var(--font-head); letter-spacing: -0.01em; display: flex; align-items: center; gap: .5rem; }
+.brand-sub { font-size: 12px; line-height: 16px; color: var(--text-2); }
+.nav { display: flex; gap: .25rem; }
+.nav a { padding: .5rem .875rem; border-radius: var(--r); font: 600 14px/20px var(--font-body); color: var(--text-2); }
+.nav a:hover { background: var(--slate-subtle); color: var(--text); }
+.accent-line { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: linear-gradient(90deg, var(--navy-deep), var(--crimson) 50%, var(--navy-light)); }
+
+/* 섹션 공통 */
+section { padding: 6rem 0; }
+.sec-white { background: #fff; }
+.sec-canvas { background: var(--canvas); }
+.sec-navy { background: var(--navy-deep); color: #fff; }
+.sec-head { display: flex; flex-direction: column; gap: .75rem; max-width: 760px; margin-bottom: 3.5rem; }
+.eyebrow { display: flex; align-items: center; gap: .5rem; color: var(--text-2); }
+.eyebrow .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--crimson); }
+.eyebrow .dot.navy { background: var(--navy); }
+.eyebrow .dot.green { background: var(--verified); }
+.grid { display: grid; gap: 1.5rem; }
+.g2 { grid-template-columns: repeat(2, 1fr); }
+.g3 { grid-template-columns: repeat(3, 1fr); }
+.g4 { grid-template-columns: repeat(4, 1fr); }
+
+/* 히어로 */
+.hero { padding: calc(72px + 5rem) 0 5rem; background: linear-gradient(180deg, var(--canvas), #fff 60%, var(--canvas)); position: relative; overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: 7fr 5fr; gap: 3rem; align-items: center; }
+.hero h1 .accent { color: var(--crimson); }
+.hero-copy { display: flex; flex-direction: column; gap: 1.5rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 1rem; padding-top: .5rem; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; padding-top: 1rem; }
+.stat { padding: 1rem; display: flex; flex-direction: column; gap: .25rem; }
+.stat .num { font: 700 32px/40px var(--font-tech); letter-spacing: -0.02em; }
+.stat .unit { font: 600 14px/20px var(--font-body); color: var(--text-2); margin-left: .125rem; }
+.stat.media .num, .stat.media .unit, .stat.media .tech { color: var(--crimson); }
+.stats-note { color: var(--text-muted); }
+
+/* 뷰파인더 카드 */
+.viewfinder { position: relative; border-radius: var(--r-xl); background: var(--navy-deep); color: #fff;
+  padding: 2rem; min-height: 460px; display: flex; flex-direction: column; justify-content: space-between;
+  overflow: hidden; box-shadow: var(--shadow-lift); }
+.viewfinder::before { content: ""; position: absolute; inset: 0;
+  background:
+    linear-gradient(rgba(148,163,184,.08) 1px, transparent 1px) 0 0 / 100% 33.33%,
+    linear-gradient(90deg, rgba(148,163,184,.08) 1px, transparent 1px) 0 0 / 33.33% 100%;
+  pointer-events: none; }
+.vf-corner { position: absolute; width: 28px; height: 28px; border-color: rgba(248,250,252,.55); border-style: solid; }
+.vf-corner.tl { top: 16px; left: 16px; border-width: 2px 0 0 2px; }
+.vf-corner.tr { top: 16px; right: 16px; border-width: 2px 2px 0 0; }
+.vf-corner.bl { bottom: 16px; left: 16px; border-width: 0 0 2px 2px; }
+.vf-corner.br { bottom: 16px; right: 16px; border-width: 0 2px 2px 0; }
+.vf-top { display: flex; justify-content: space-between; align-items: center; position: relative; color: var(--text-muted); }
+.rec { display: inline-flex; align-items: center; gap: .5rem; color: #fff; }
+.rec .led { width: 8px; height: 8px; border-radius: 50%; background: var(--crimson); animation: blink 1.4s infinite; }
+@keyframes blink { 50% { opacity: .25; } }
+.vf-center { position: relative; text-align: center; padding: 2rem 0; }
+.vf-center .icon { font-size: 56px; color: rgba(248,250,252,.85); }
+.vf-center p { margin: .75rem 0 0; color: var(--text-muted); }
+.id-plate { position: relative; background: rgba(30,41,59,.75); backdrop-filter: blur(12px);
+  border: 1px solid rgba(203,213,225,.15); border-radius: var(--r-md); padding: 1rem 1.25rem;
+  display: grid; gap: .75rem; }
+.id-row { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+.id-row .k { color: var(--text-muted); }
+.id-row .v { font: 600 14px/20px var(--font-tech); letter-spacing: .02em; text-align: right; }
+.hotline { margin-top: 1rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 1rem 1.25rem; background: #fff; color: var(--text); border-radius: var(--r-md); position: relative; }
+.hotline .num { font: 700 22px/28px var(--font-tech); letter-spacing: .01em; }
+
+/* 대표 소개 */
+.bento { padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; gap: 1.5rem; }
+.bento-icon { width: 48px; height: 48px; border-radius: var(--r-md); display: grid; place-items: center; }
+.bento-icon.navy { background: var(--navy-deep); color: #fff; }
+.bento-icon.blue { background: var(--blue-soft); color: var(--blue); }
+.bento-icon.media { background: var(--crimson-soft); color: var(--crimson); }
+.bento p { margin: 0; }
+.bento-foot { display: flex; align-items: center; gap: .5rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.quote { margin-top: 3rem; padding: 1.5rem 2rem; border-radius: var(--r-lg); background: var(--navy-deep); color: #fff;
+  display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+.quote .q-icon { width: 48px; height: 48px; flex: none; border-radius: 50%; background: var(--navy-light); display: grid; place-items: center; color: #FFB3B6; }
+.quote p { margin: 0; }
+
+/* 사업 영역 */
+.svc { padding: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+.svc-top { display: flex; justify-content: space-between; align-items: center; }
+.svc dl { margin: 0; display: grid; gap: .625rem; }
+.svc dt { font: 600 12px/16px var(--font-tech); letter-spacing: .06em; color: var(--text-muted); }
+.svc dd { margin: 0 0 .25rem; font-size: 14px; line-height: 22px; color: var(--text-2); }
+.svc-wide { grid-column: 1 / -1; background: var(--navy-deep); color: #fff; border-color: var(--navy-deep);
+  display: grid; grid-template-columns: 8fr 4fr; gap: 2rem; align-items: center; }
+.svc-wide dd { color: #CBD5E1; }
+.svc-wide dt { color: var(--text-muted); }
+
+/* 고객별 */
+.client { padding: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+.client-head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+.client-head .who { display: flex; align-items: center; gap: .75rem; }
+.client ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .875rem; }
+.client li { display: flex; gap: .75rem; align-items: flex-start; font-size: 14px; line-height: 22px; }
+.client li .icon { font-size: 20px; flex: none; margin-top: 1px; }
+
+/* 진행 단계 */
+.steps { display: grid; grid-template-columns: repeat(7, 1fr); gap: 1rem; counter-reset: step; }
+.step { padding: 1.25rem; border-radius: var(--r-md); background: rgba(30,41,59,.6); border: 1px solid rgba(148,163,184,.15);
+  display: flex; flex-direction: column; gap: 1rem; min-height: 200px; }
+.step .no { color: #CBD5E1; background: var(--navy-light); padding: .125rem .5rem; border-radius: var(--r-sm); width: fit-content; }
+.step h3 { font: 600 18px/24px var(--font-head); margin: 0; }
+.step p { margin: 0; color: var(--text-muted); font-size: 14px; line-height: 22px; }
+.step.last { background: var(--crimson); border-color: var(--crimson); }
+.step.last .no { background: #fff; color: var(--crimson); }
+.step.last p { color: rgba(255,255,255,.9); }
+
+/* 원칙 */
+.principles { display: grid; grid-template-columns: 5fr 7fr; gap: 3rem; align-items: start; }
+.pr { padding: 1.5rem; display: flex; flex-direction: column; gap: .75rem; }
+.pr .num { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; font: 600 12px/1 var(--font-tech); color: #fff; background: var(--navy); }
+.pr h3 { font: 600 19px/26px var(--font-head); margin: 0; }
+.pr p { margin: 0; }
+
+/* 문의·운영 정보 */
+.contact-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 3rem; }
+.contact-card { padding: 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.contact-card .left { display: flex; align-items: center; gap: .75rem; min-width: 0; }
+.ci { width: 40px; height: 40px; flex: none; border-radius: var(--r); display: grid; place-items: center; color: #fff; background: var(--navy-deep); }
+.ci.media { background: var(--crimson); }
+.ci.blue { background: var(--blue-soft); color: var(--blue); }
+.contact-card .val { font: 700 18px/24px var(--font-tech); overflow-wrap: anywhere; }
+.info-table { width: 100%; border-collapse: collapse; }
+.info-table th, .info-table td { text-align: left; padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 14px; line-height: 22px; }
+.info-table th { width: 34%; font-weight: 600; color: var(--text-2); background: var(--canvas); }
+.info-table tr:last-child th, .info-table tr:last-child td { border-bottom: 0; }
+
+/* 채널 */
+.ch { padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; gap: 1.5rem; position: relative; overflow: hidden; }
+.ch-main::after { content: ""; position: absolute; top: 0; right: 0; width: 96px; height: 96px; background: var(--crimson-soft); border-bottom-left-radius: 100%; }
+.ch-main .corner-icon { position: absolute; top: 18px; right: 18px; color: var(--crimson); z-index: 1; font-size: 28px; }
+.ch .url { color: var(--text-muted); font: 500 12px/16px var(--font-tech); overflow-wrap: anywhere; }
+.ch .btn { width: 100%; }
+.ch-wide { grid-column: span 2; }
+
+/* 정보 상태 */
+.status-table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; }
+.status-table th, .status-table td { padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); text-align: left; font-size: 14px; line-height: 22px; vertical-align: top; }
+.status-table th { width: 220px; background: var(--canvas); }
+.status-table tr:last-child th, .status-table tr:last-child td { border-bottom: 0; }
+.badge-ok { color: var(--verified); }
+.todo { margin-top: 2rem; padding: 1.5rem 1.75rem; border: 1px dashed var(--pending-border); border-radius: var(--r-lg); background: var(--pending-bg); }
+.todo h3 { margin: 0 0 .25rem; font: 600 18px/26px var(--font-head); color: var(--pending-text); }
+.todo ul { margin: 1rem 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: .5rem 1.5rem; }
+.todo li { display: flex; gap: .5rem; align-items: flex-start; font-size: 14px; line-height: 22px; color: #78350F; }
+.todo li::before { content: ""; width: 14px; height: 14px; margin-top: 4px; flex: none; border: 1.5px solid #D97706; border-radius: 3px; background: #fff; }
+.todo code { font: 500 12px/20px var(--font-tech); color: #B45309; }
+
+/* 법정 고지 푸터 */
+footer { background: var(--navy-deep); color: var(--text-muted); padding: 4rem 0 2.5rem; }
+.foot-top { display: flex; justify-content: space-between; gap: 2rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--navy-light); }
+.legal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem 1.5rem; padding: 2rem 0 1.5rem; }
+.legal-grid div { display: flex; gap: .5rem; font-size: 13px; line-height: 20px; }
+.legal-grid .k { color: var(--border-strong); font-weight: 600; flex: none; }
+.legal-grid .v { font-family: var(--font-body); }
+.legal-grid .v.num { font-family: var(--font-tech); letter-spacing: .02em; }
+.foot-chips { display: flex; flex-wrap: wrap; gap: .5rem; }
+.foot-chips a { display: inline-flex; align-items: center; gap: .375rem; padding: .375rem .75rem; border-radius: var(--r); background: var(--navy-light); font: 600 12px/16px var(--font-body); }
+.foot-chips a:hover { background: var(--crimson); color: #fff; }
+.compliance { display: flex; gap: .75rem; padding: 1rem; border-radius: var(--r-md); background: rgba(30,41,59,.6); border: 1px solid var(--navy-light); }
+
+/* ── 반응형: Tablet 768–1024 / Mobile < 768 ───────────────────── */
+@media (max-width: 1180px) {
+  .nav { display: none; }
+  .steps { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 1024px) {
+  :root { --gutter: 2rem; }
+  .hero-grid, .principles, .contact-grid { grid-template-columns: 1fr; }
+  .g3 { grid-template-columns: repeat(2, 1fr); }
+  .g4, .stats { grid-template-columns: repeat(2, 1fr); }
+  .svc-wide { grid-template-columns: 1fr; }
+  .legal-grid { grid-template-columns: repeat(2, 1fr); }
+  .viewfinder { min-height: 380px; }
+}
+@media (max-width: 767px) {
+  :root { --gutter: 1.25rem; }
+  section { padding: 4rem 0; }
+  .hero { padding: calc(64px + 3rem) 0 4rem; }
+  .header .wrap { height: 64px; }
+  .h-hero { font-size: 36px; line-height: 46px; }
+  .h-xl { font-size: 28px; line-height: 38px; letter-spacing: -0.015em; }
+  .h-lg { font-size: 24px; line-height: 32px; }
+  .g2, .g3 { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+  .step { min-height: 0; }
+  .quote, .foot-top { flex-direction: column; align-items: flex-start; }
+  .ch-wide { grid-column: auto; }
+  .todo ul, .legal-grid { grid-template-columns: 1fr; }
+  .status-table th { width: 38%; }
+  .client, .bento, .svc, .ch { padding: 1.5rem; }
+  .header .btn-label { display: none; }
+  .brand-sub { display: none; }
+  .stat .num { font-size: 26px; line-height: 32px; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="JP이야기 처음으로">
+      <span class="brand-mark">JP</span>
+      <span>
+        <span class="brand-name">JP이야기 <span class="chip chip-broker chip-pill" style="padding:.125rem .5rem">7년차</span></span>
+        <span class="brand-sub">월드원공인중개사사무소</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#about">대표 소개</a>
+      <a href="#services">사업 영역</a>
+      <a href="#clients">고객별 업무</a>
+      <a href="#process">진행 단계</a>
+      <a href="#contact">문의·운영</a>
+      <a href="#channels">공식 채널</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="tel:010-3848-5949"><span class="icon" style="font-size:18px">call</span><span class="btn-label">전화 상담 010-3848-5949</span></a>
+  </div>
+  <div class="accent-line"></div>
+</header>
+
+<main id="top">
+
+<!-- ① 히어로 -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="chip chip-broker chip-pill" style="width:fit-content"><span class="icon" style="font-size:16px">flight</span>드론과 IT 장비로 콘텐츠를 만드는 공인중개사</span>
+      <h1 class="h-hero">영상 콘텐츠를 만드는<br><span class="accent">7년차 공인중개사</span>의<br>1인 중개사무소</h1>
+      <p class="body-lg muted" style="margin:0;max-width:640px">JP이야기는 상담, 매물 안내, 계약 진행, 촬영과 콘텐츠 제작을 임재필 대표가 직접 맡습니다. 고객은 처음 문의부터 업무가 끝날 때까지 같은 담당자와 소통합니다.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#contact"><span class="icon" style="font-size:20px">edit_calendar</span>상담 문의 방법 보기</a>
+        <a class="btn btn-media" href="https://www.youtube.com/@%EA%B0%95%EB%82%A8%EA%B3%B5%EC%9D%B8%EC%A4%91%EA%B0%9C%EC%82%AC" target="_blank" rel="noreferrer"><span class="icon" style="font-size:20px">play_circle</span>유튜브 「JP이야기」</a>
+      </div>
+      <div>
+        <div class="stats">
+          <div class="card stat"><span class="tech" style="color:var(--text-muted)">Experience</span><span><span class="num">7</span><span class="unit">년차</span></span><span class="body-sm muted">공인중개사 실무</span></div>
+          <div class="card stat media"><span class="tech">Subscribers</span><span><span class="num">1.65</span><span class="unit">만명</span></span><span class="body-sm muted">유튜브 구독자</span></div>
+          <div class="card stat"><span class="tech" style="color:var(--text-muted)">Videos</span><span><span class="num">2.5</span><span class="unit">천개</span></span><span class="body-sm muted">게시 동영상</span></div>
+          <div class="card stat"><span class="tech" style="color:var(--verified)">Direct</span><span><span class="num" style="color:var(--verified)">1</span><span class="unit">인</span></span><span class="body-sm muted">대표 직접 수행</span></div>
+        </div>
+        <p class="legal stats-note" style="margin:.75rem 0 0">구독자·동영상 수는 2026년 10월 11일 유튜브 채널 화면 기준입니다.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="viewfinder" aria-label="사무소 정보 카드">
+        <span class="vf-corner tl"></span><span class="vf-corner tr"></span><span class="vf-corner bl"></span><span class="vf-corner br"></span>
+        <div class="vf-top tech"><span class="rec"><span class="led"></span>REC · JP이야기</span><span>DRONE &amp; IT</span></div>
+        <div class="vf-center">
+          <span class="icon">videocam</span>
+          <p class="body-sm">"드론과 IT장비들을 활용하여<br>컨텐츠 제작하는 공인중개사입니다."</p>
+          <p class="tech" style="margin-top:.5rem">— 유튜브 채널 소개</p>
+        </div>
+        <div>
+          <div class="id-plate">
+            <div class="id-row"><span class="h-md" style="font-size:20px">임재필 대표</span><span class="chip chip-slate">공인중개사</span></div>
+            <div class="id-row"><span class="k body-sm">상호</span><span class="v" style="font-family:var(--font-body)">월드원공인중개사사무소</span></div>
+            <div class="id-row"><span class="k body-sm">등록번호</span><span class="v">11680-2023-00498</span></div>
+          </div>
+          <div class="hotline">
+            <div><span class="tech" style="color:var(--text-muted);display:block">Direct Line</span><span class="num">010-3848-5949</span></div>
+            <a class="btn btn-primary btn-sm" href="tel:010-3848-5949">전화 연결</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ② 회사 개요 -->
+<section class="sec-white" id="overview">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow tech"><span class="dot navy"></span>Company Overview</span>
+      <h2 class="h-xl">회사 개요</h2>
+    </div>
+    <div class="card" style="overflow:hidden">
+      <table class="info-table">
+        <tr><th>브랜드명</th><td>JP이야기</td></tr>
+        <tr><th>상호</th><td>월드원공인중개사사무소</td></tr>
+        <tr><th>대표</th><td>임재필 (공인중개사, 실무 7년차)</td></tr>
+        <tr><th>규모</th><td>1인 사무소</td></tr>
+        <tr><th>소재지</th><td>서울시 강남구 봉은사로 129, 거평타운 1501호</td></tr>
+        <tr><th>중개사무소 등록번호</th><td><span class="chip chip-broker"><span class="icon" style="font-size:14px">verified</span>11680-2023-00498</span></td></tr>
+        <tr><th>연락처</th><td><a href="tel:010-3848-5949">010-3848-5949</a></td></tr>
+        <tr><th>주요 고객</th><td>공인중개사, 분양 관계자, 일반 투자자, 내 집을 마련하려는 실수요자</td></tr>
+        <tr><th>취급 품목</th><td>아파트, 오피스텔, 빌라, 단독·다가구, 상가, 사무실, 건물, 지식산업센터, 토지, 분양권, 재개발·재건축</td></tr>
+        <tr><th>거래 유형</th><td>매매, 전세, 월세, 투자, 분양</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ③ 대표 소개 -->
+<section class="sec-canvas" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow tech"><span class="dot"></span>Founder</span>
+      <h2 class="h-xl">1인 사무소,<br>처음부터 끝까지 대표가 직접 맡습니다</h2>
+      <p class="muted" style="margin:0">임재필 대표는 실무 7년차 공인중개사이며 유튜브 채널 「JP이야기」를 운영합니다.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card bento lift">
+        <div style="display:grid;gap:1rem">
+          <span class="bento-icon navy"><span class="icon">person_pin</span></span>
+          <h3 class="h-md">같은 담당자와 끝까지</h3>
+          <p class="body-sm muted">JP이야기는 1인 사무소이므로 상담, 매물 안내, 계약 진행, 촬영과 콘텐츠 제작을 임재필 대표가 직접 맡습니다.</p>
+        </div>
+        <div class="bento-foot tech"><span class="icon" style="font-size:18px;color:var(--verified)">verified</span>대표 직접 수행</div>
+      </div>
+      <div class="card bento lift">
+        <div style="display:grid;gap:1rem">
+          <span class="bento-icon blue"><span class="icon">gavel</span></span>
+          <h3 class="h-md">실무 7년차 공인중개사</h3>
+          <p class="body-sm muted">JP이야기는 공인중개사법에 따른 중개 업무와 별도로 정한 컨설팅 상담을 구분해 진행합니다.</p>
+        </div>
+        <div class="bento-foot tech"><span class="icon" style="font-size:18px;color:var(--blue)">badge</span>등록 11680-2023-00498</div>
+      </div>
+      <div class="card bento lift">
+        <div style="display:grid;gap:1rem">
+          <span class="bento-icon media"><span class="icon">videocam</span></span>
+          <h3 class="h-md">드론·IT 장비로 만드는 영상</h3>
+          <p class="body-sm muted">유튜브 채널 「JP이야기」는 분양 현장, 매물, 건축 사례 등 부동산 정보를 영상으로 다룹니다.</p>
+        </div>
+        <div class="bento-foot tech" style="color:var(--crimson)"><span class="icon" style="font-size:18px">smart_display</span>구독자 1.65만명 · 2026.10.11</div>
+      </div>
+    </div>
+    <div class="quote">
+      <div style="display:flex;align-items:center;gap:1rem">
+        <span class="q-icon"><span class="icon">format_quote</span></span>
+        <div>
+          <p class="h-md">JP이야기는 시세 상승, 투자 수익, 대출 승인, 분양 결과를 약속하지 않습니다.</p>
+          <p class="body-sm" style="color:var(--text-muted);margin-top:.25rem">확인된 정보만 안내하고, 확인되지 않은 내용은 확인 후 다시 안내합니다.</p>
+        </div>
+      </div>
+      <span style="display:flex;align-items:center;gap:.75rem;flex:none"><span class="chip" style="background:var(--navy-light);color:var(--border-strong)">Representative</span><span class="h-md">임재필</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ④ 사업 영역 -->
+<section class="sec-white" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow tech"><span class="dot navy"></span>Core Business · 7</span>
+      <h2 class="h-xl">JP이야기 사업 영역</h2>
+      <p class="muted" style="margin:0">중개와 컨설팅, 영상 제작을 서로 다른 서비스로 구분해 운영합니다.</p>
+    </div>
+    <div class="grid g3">
+      <article class="card svc lift">
+        <div class="svc-top"><span class="chip chip-media">01 · Media</span><span class="icon" style="color:var(--crimson)">smart_display</span></div>
+        <h3 class="h-md">부동산 유튜브 채널 운영</h3>
+        <dl><dt>누구에게</dt><dd>부동산 정보를 찾는 일반 시청자와 투자자</dd><dt>무엇을</dt><dd>분양 현장, 매물, 건축 사례 등 부동산 정보를 다루는 영상</dd><dt>어떤 형태로</dt><dd>유튜브 채널 「JP이야기」의 일반 영상과 쇼츠</dd></dl>
+      </article>
+      <article class="card svc lift">
+        <div class="svc-top"><span class="chip chip-broker">02 · Brokerage</span><span class="icon" style="color:var(--blue)">real_estate_agent</span></div>
+        <h3 class="h-md">부동산 중개 및 컨설팅</h3>
+        <dl><dt>누구에게</dt><dd>부동산을 사고팔거나 임대차하려는 고객</dd><dt>무엇을</dt><dd>중개대상물 탐색, 현장 안내, 계약 진행과 거래 조건 검토 상담</dd><dt>어떤 형태로</dt><dd>공인중개사법에 따른 중개 업무와 별도로 정한 컨설팅 상담</dd></dl>
+      </article>
+      <article class="card svc lift">
+        <div class="svc-top"><span class="chip chip-slate">03 · Production</span><span class="icon">videocam</span></div>
+        <h3 class="h-md">부동산 분양 현장 촬영</h3>
+        <dl><dt>누구에게</dt><dd>분양 현장을 홍보하려는 분양 관계자와 공인중개사</dd><dt>무엇을</dt><dd>분양 현장, 견본주택, 주변 입지를 담은 영상</dd><dt>어떤 형태로</dt><dd>촬영과 편집을 거친 홍보 영상 납품</dd></dl>
+      </article>
+      <article class="card svc lift">
+        <div class="svc-top"><span class="chip chip-slate">04 · Transaction</span><span class="icon">apartment</span></div>
+        <h3 class="h-md">부동산 매매 및 임대</h3>
+        <dl><dt>누구에게</dt><dd>매도인, 매수인, 임대인, 임차인</dd><dt>무엇을</dt><dd>아파트, 오피스텔, 빌라, 상가, 사무실, 토지 등의 매매·전세·월세 중개</dd><dt>어떤 형태로</dt><dd>매물 접수, 현장 안내, 계약서 작성, 잔금까지의 중개 업무</dd></dl>
+      </article>
+      <article class="card svc lift">
+        <div class="svc-top"><span class="chip chip-broker">05 · New Build</span><span class="icon" style="color:var(--blue)">domain_add</span></div>
+        <h3 class="h-md">신축 분양 관련 업무</h3>
+        <dl><dt>누구에게</dt><dd>신축 분양 물건을 알아보는 실수요자와 투자자</dd><dt>무엇을</dt><dd>신축 분양 물건의 정보 안내와 상담</dd><dt>어떤 형태로</dt><dd>분양 조건 안내, 현장 방문 연결<br>업무 범위: 상담 시 안내</dd></dl>
+      </article>
+      <article class="card svc lift">
+        <div class="svc-top"><span class="chip chip-media">06 · Home</span><span class="icon" style="color:var(--crimson)">home</span></div>
+        <h3 class="h-md">내집마련 컨설팅</h3>
+        <dl><dt>누구에게</dt><dd>처음 집을 마련하려는 실수요자</dd><dt>무엇을</dt><dd>예산, 희망 지역, 주택 유형에 맞춘 내 집 마련 방향 상담</dd><dt>어떤 형태로</dt><dd>상담 형태: 상담 시 안내<br>결과물: 상담 시 안내</dd></dl>
+      </article>
+      <article class="card svc svc-wide">
+        <div style="display:grid;gap:1rem">
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap"><span class="chip" style="background:var(--navy-light);color:#FFB3B6">07 · Broker Partnership</span><span class="chip chip-tech" style="background:transparent;border:1px solid var(--navy-light);color:#6EE7B7">For Brokers</span></div>
+          <h3 class="h-lg">부동산 유튜브 촬영 협업</h3>
+          <dl><dt>누구에게</dt><dd>자신의 매물이나 사무소를 영상으로 알리려는 공인중개사</dd><dt>무엇을</dt><dd>매물 소개, 실내 투어, 드론 촬영을 포함한 유튜브 영상</dd><dt>어떤 형태로</dt><dd>촬영·편집 영상 납품과 공동중개 협업</dd></dl>
+        </div>
+        <div style="display:grid;gap:.75rem">
+          <a class="btn btn-media" href="http://pf.kakao.com/_RhKwG" target="_blank" rel="noreferrer"><span class="icon" style="font-size:18px">handshake</span>촬영·협업 문의 (카카오톡)</a>
+          <a class="btn btn-outline" href="tel:010-3848-5949" style="background:transparent;color:#fff;border-color:var(--navy-light)"><span class="icon" style="font-size:18px">call</span>010-3848-5949</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ⑤ 고객별 문의 가능 업무 -->
+<section class="sec-canvas" id="clients">
+  <div class="wrap">
+    <div class="sec-head" style="margin-left:auto;margin-right:auto;text-align:center;align-items:center">
+      <span class="eyebrow tech" style="color:var(--crimson)">Who We Serve</span>
+      <h2 class="h-xl">고객별 문의 가능 업무</h2>
+    </div>
+    <div class="grid g2">
+      <div class="card client">
+        <div class="client-head">
+          <div class="who"><span class="bento-icon navy"><span class="icon">business_center</span></span><div><h3 class="h-md">공인중개사 고객</h3><span class="tech" style="color:var(--text-muted)">For Brokers</span></div></div>
+          <span class="chip chip-broker chip-pill">B2B</span>
+        </div>
+        <ul>
+          <li><span class="icon" style="color:var(--crimson)">check_circle</span>보유 매물의 유튜브 영상 촬영과 편집</li>
+          <li><span class="icon" style="color:var(--crimson)">check_circle</span>분양 현장 홍보 영상 촬영</li>
+          <li><span class="icon" style="color:var(--crimson)">check_circle</span>공동중개 협업</li>
+          <li><span class="icon" style="color:var(--crimson)">check_circle</span>영상 촬영 일정, 장소, 준비물 상담</li>
+        </ul>
+      </div>
+      <div class="card client">
+        <div class="client-head">
+          <div class="who"><span class="bento-icon" style="background:var(--crimson);color:#fff"><span class="icon">family_restroom</span></span><div><h3 class="h-md">투자자·실수요자 고객</h3><span class="tech" style="color:var(--text-muted)">For Buyers &amp; Investors</span></div></div>
+          <span class="chip chip-media chip-pill">B2C</span>
+        </div>
+        <ul>
+          <li><span class="icon" style="color:var(--verified)">verified</span>매매·전세·월세 중개 의뢰</li>
+          <li><span class="icon" style="color:var(--verified)">verified</span>내집마련 컨설팅</li>
+          <li><span class="icon" style="color:var(--verified)">verified</span>신축 분양 물건 안내</li>
+          <li><span class="icon" style="color:var(--verified)">verified</span>매물 현장 안내 예약</li>
+          <li><span class="icon" style="color:var(--verified)">verified</span>세무사, 법무사, 감정평가사 등 전문가 연계 안내 (전문가 상담 자체는 해당 전문가가 수행합니다.)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑥ 업무 진행 단계 -->
+<section class="sec-navy" id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow tech" style="color:var(--border-strong)"><span class="dot green"></span>Transaction Process</span>
+      <h2 class="h-xl">중개 업무 진행 7단계</h2>
+      <p style="margin:0;color:var(--text-muted)">JP이야기의 중개 업무는 다음 순서로 진행됩니다.</p>
+    </div>
+    <ol class="steps" style="list-style:none;margin:0;padding:0">
+      <li class="step"><span class="tech no">Step 01</span><h3>신규문의</h3><p>고객이 원하는 조건을 확인합니다.</p></li>
+      <li class="step"><span class="tech no">Step 02</span><h3>현장안내</h3><p>조건에 맞는 매물을 안내합니다.</p></li>
+      <li class="step"><span class="tech no">Step 03</span><h3>계약검토</h3><p>등기사항증명서, 건축물대장 등 공부 서류와 거래 조건을 확인합니다.</p></li>
+      <li class="step"><span class="tech no">Step 04</span><h3>계약서 작성</h3><p>중개대상물 확인·설명서를 교부하고 계약서를 작성합니다.</p></li>
+      <li class="step"><span class="tech no">Step 05</span><h3>가계약금 입금</h3><p>당사자가 합의한 경우 가계약금을 지급합니다.</p></li>
+      <li class="step"><span class="tech no">Step 06</span><h3>중도금</h3><p>계약서에 정한 날 중도금을 지급합니다.</p></li>
+      <li class="step last"><span class="tech no">Step 07</span><h3>잔금</h3><p>잔금 지급과 함께 인도와 이전 절차를 진행합니다.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ⑦ 소통 원칙 -->
+<section class="sec-white" id="principles">
+  <div class="wrap principles">
+    <div class="sec-head" style="margin-bottom:0">
+      <span class="eyebrow tech"><span class="dot"></span>Communication</span>
+      <h2 class="h-xl">JP이야기<br>소통 원칙</h2>
+      <p class="muted" style="margin:0">중개, 컨설팅, 촬영 협업 모든 업무에 같은 원칙을 적용합니다.</p>
+    </div>
+    <div class="grid g2">
+      <div class="card pr"><span class="num">01</span><h3>확인된 정보만 안내</h3><p class="body-sm muted">JP이야기는 확인된 정보만 안내하고, 확인되지 않은 내용은 확인 후 다시 안내합니다.</p></div>
+      <div class="card pr"><span class="num" style="background:var(--crimson)">02</span><h3>결과를 약속하지 않음</h3><p class="body-sm muted">JP이야기는 시세 상승, 투자 수익, 대출 승인, 분양 결과를 약속하지 않습니다.</p></div>
+      <div class="card pr"><span class="num" style="background:var(--navy-light)">03</span><h3>서비스와 비용 구분</h3><p class="body-sm muted">JP이야기는 중개, 컨설팅, 촬영 협업을 서로 다른 서비스로 구분해 안내하고, 서비스마다 범위와 비용을 따로 설명합니다.</p></div>
+      <div class="card pr"><span class="num" style="background:var(--blue)">04</span><h3>전문가 확인 안내</h3><p class="body-sm muted">세금, 대출, 법률 판단이 필요한 질문은 해당 분야 전문가 확인이 필요하다고 안내합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑧ 문의 채널과 운영 정보 -->
+<section class="sec-canvas" id="contact">
+  <div class="wrap contact-grid">
+    <div style="display:grid;gap:1rem;align-content:start">
+      <div class="sec-head" style="margin-bottom:1rem">
+        <span class="eyebrow tech"><span class="dot"></span>Contact</span>
+        <h2 class="h-xl">문의 채널</h2>
+        <p class="muted" style="margin:0">모든 문의는 임재필 대표가 직접 확인합니다.</p>
+      </div>
+      <div class="card contact-card">
+        <div class="left"><span class="ci"><span class="icon" style="font-size:20px">call</span></span><div><span class="tech" style="color:var(--text-muted)">전화</span><a class="val" style="display:block" href="tel:010-3848-5949">010-3848-5949</a></div></div>
+        <a class="btn btn-primary btn-sm" href="tel:010-3848-5949">통화</a>
+      </div>
+      <div class="card contact-card">
+        <div class="left"><span class="ci media"><span class="icon" style="font-size:20px">forum</span></span><div><span class="tech" style="color:var(--text-muted)">카카오톡 채널</span><span class="val" style="display:block;font-family:var(--font-head);font-size:16px">월드원 공인중개사사무소</span></div></div>
+        <a class="btn btn-media btn-sm" href="http://pf.kakao.com/_RhKwG" target="_blank" rel="noreferrer">채팅</a>
+      </div>
+      <div class="card contact-card" style="align-items:flex-start">
+        <div class="left" style="align-items:flex-start"><span class="ci blue"><span class="icon" style="font-size:20px">mail</span></span><div><span class="tech" style="color:var(--text-muted)">이메일</span><a class="val" style="display:block;font-size:16px" href="mailto:jopd3733@nate.com">jopd3733@nate.com</a><span style="display:block;margin-top:.375rem"></span></div></div>
+      </div>
+    </div>
+    <div style="display:grid;gap:1rem;align-content:start">
+      <div class="card" style="overflow:hidden">
+        <table class="info-table">
+          <tr><th>사무소 위치</th><td>서울시 강남구 봉은사로 129, 거평타운 1501호</td></tr>
+          <tr><th>영업시간</th><td>상담 시 안내</td></tr>
+          <tr><th>휴무일</th><td>상담 시 안내</td></tr>
+          <tr><th>문의 응답 시간</th><td>상담 시 안내</td></tr>
+          <tr><th>사무소 방문 상담</th><td>상담 시 안내</td></tr>
+          <tr><th>중개·컨설팅 서비스 가능 지역</th><td>상담 시 안내</td></tr>
+        </table>
+      </div>
+      <a class="btn btn-outline" href="https://naver.me/F42TfHBr" target="_blank" rel="noreferrer"><span class="icon" style="font-size:18px">location_on</span>네이버 지도에서 위치 보기</a>
+    </div>
+  </div>
+</section>
+
+<!-- ⑨ 공식 채널 -->
+<section class="sec-white" id="channels">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow tech"><span class="dot"></span>Official Channels</span>
+      <h2 class="h-xl">공식 채널</h2>
+    </div>
+    <div class="grid g3">
+      <div class="card ch ch-main lift">
+        <span class="icon corner-icon">smart_display</span>
+        <div style="display:grid;gap:.75rem;position:relative;z-index:1">
+          <span class="chip" style="background:var(--crimson);color:#fff;width:fit-content">Main Channel</span>
+          <h3 class="h-md">유튜브 「JP이야기」</h3>
+          <p class="body-sm muted" style="margin:0">분양 현장, 매물, 건축 사례 등 부동산 정보를 영상으로 다룹니다.</p>
+          <span class="tech" style="color:var(--crimson)">구독자 1.65만명 · 동영상 2.5천개</span>
+        </div>
+        <a class="btn btn-media" href="https://www.youtube.com/@%EA%B0%95%EB%82%A8%EA%B3%B5%EC%9D%B8%EC%A4%91%EA%B0%9C%EC%82%AC" target="_blank" rel="noreferrer">유튜브 바로가기<span class="icon" style="font-size:16px">open_in_new</span></a>
+      </div>
+      <div class="card ch lift">
+        <div style="display:grid;gap:.75rem">
+          <span class="bento-icon blue" style="width:40px;height:40px"><span class="icon">article</span></span>
+          <h3 class="h-md">네이버 블로그</h3>
+          <span class="url">blog.naver.com/jopd2737</span>
+        </div>
+        <a class="btn btn-outline" href="https://blog.naver.com/jopd2737" target="_blank" rel="noreferrer">블로그 방문<span class="icon" style="font-size:16px">open_in_new</span></a>
+      </div>
+      <div class="card ch lift">
+        <div style="display:grid;gap:.75rem">
+          <span class="bento-icon media" style="width:40px;height:40px"><span class="icon">photo_camera</span></span>
+          <h3 class="h-md">인스타그램</h3>
+          <span class="url">@jp_lim2737</span>
+        </div>
+        <a class="btn btn-outline" href="https://www.instagram.com/jp_lim2737" target="_blank" rel="noreferrer">인스타그램 보기<span class="icon" style="font-size:16px">open_in_new</span></a>
+      </div>
+      <div class="card ch lift">
+        <div style="display:grid;gap:.75rem">
+          <span class="bento-icon" style="width:40px;height:40px;background:var(--slate-subtle)"><span class="icon">location_on</span></span>
+          <h3 class="h-md">네이버 스마트플레이스</h3>
+          <span class="url">naver.me/F42TfHBr</span>
+        </div>
+        <a class="btn btn-outline" href="https://naver.me/F42TfHBr" target="_blank" rel="noreferrer">지도·플레이스<span class="icon" style="font-size:16px">open_in_new</span></a>
+      </div>
+      <div class="card ch ch-wide lift">
+        <div style="display:grid;gap:.75rem">
+          <div style="display:flex;justify-content:space-between;align-items:center"><span class="bento-icon navy" style="width:40px;height:40px"><span class="icon">chat</span></span><span class="chip chip-broker chip-pill">1:1 Chat</span></div>
+          <h3 class="h-md">카카오톡 채널 「월드원 공인중개사사무소」</h3>
+          <span class="url">pf.kakao.com/_RhKwG</span>
+        </div>
+        <a class="btn btn-primary" href="http://pf.kakao.com/_RhKwG" target="_blank" rel="noreferrer"><span class="icon" style="font-size:18px">chat_bubble</span>카카오톡 채널 열기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑩ 확인된 정보와 미확정 정보 -->
+<section class="sec-canvas" id="status">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow tech"><span class="dot green"></span>Information Status</span>
+      <h2 class="h-lg">확인된 정보와 미확정 정보</h2>
+    </div>
+    <table class="status-table">
+      <tr><th><span class="badge-ok">● 확인된 정보</span></th><td>상호, 대표, 경력 7년차, 1인 사무소, 소재지, 중개사무소 등록번호, 전화번호, 취급 품목, 거래 유형, 업무 진행 단계, 공식 채널 주소</td></tr>
+      <tr><th><span style="color:var(--blue)">● 공개 자료로 확인한 정보</span></th><td>유튜브 채널명·소개 문구·구독자 수·동영상 수(2026년 10월 11일 기준), 이메일 주소, 드론·실내 투어 촬영 방식</td></tr>
+      <tr><th><span style="color:var(--pending-text)">● 미확정 정보</span></th><td>영업시간, 휴무일, 응답 시간, 서비스 가능 지역, 서비스별 비용과 정산 조건 등</td></tr>
+    </table>
+  </div>
+</section>
+
+</main>
+
+<!-- ⑪ 법정 고지 -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div style="display:grid;gap:.75rem;max-width:560px">
+        <div style="display:flex;align-items:center;gap:.75rem"><span class="brand-mark" style="background:var(--navy-light)">JP</span><span class="h-md" style="color:#fff">JP이야기</span></div>
+        <p class="body-sm" style="margin:0">영상 콘텐츠를 만드는 7년차 공인중개사의 1인 중개사무소입니다.</p>
+      </div>
+      <div class="foot-chips">
+        <a href="https://www.youtube.com/@%EA%B0%95%EB%82%A8%EA%B3%B5%EC%9D%B8%EC%A4%91%EA%B0%9C%EC%82%AC" target="_blank" rel="noreferrer"><span class="icon" style="font-size:16px">smart_display</span>유튜브</a>
+        <a href="https://blog.naver.com/jopd2737" target="_blank" rel="noreferrer"><span class="icon" style="font-size:16px">article</span>블로그</a>
+        <a href="https://www.instagram.com/jp_lim2737" target="_blank" rel="noreferrer"><span class="icon" style="font-size:16px">photo_camera</span>인스타그램</a>
+        <a href="http://pf.kakao.com/_RhKwG" target="_blank" rel="noreferrer"><span class="icon" style="font-size:16px">chat</span>카카오톡 채널</a>
+        <a href="https://naver.me/F42TfHBr" target="_blank" rel="noreferrer"><span class="icon" style="font-size:16px">pin_drop</span>스마트플레이스</a>
+      </div>
+    </div>
+    <div class="legal-grid" aria-label="법정 고지">
+      <div><span class="k">상호</span><span class="v">월드원공인중개사사무소</span></div>
+      <div><span class="k">대표</span><span class="v">임재필</span></div>
+      <div><span class="k">등록번호</span><span class="v num">11680-2023-00498</span></div>
+      <div><span class="k">소재지</span><span class="v">서울시 강남구 봉은사로 129, 거평타운 1501호</span></div>
+      <div><span class="k">연락처</span><a class="v num" href="tel:010-3848-5949">010-3848-5949</a></div>
+      <div><span class="k">이메일</span><a class="v" href="mailto:jopd3733@nate.com">jopd3733@nate.com</a></div>
+    </div>
+    <div class="compliance">
+      <span class="icon" style="color:#FB7185;font-size:20px">verified_user</span>
+      <p class="legal" style="margin:0">JP이야기는 시세 상승, 투자 수익, 대출 승인, 분양 결과를 약속하지 않습니다. 세금, 대출, 법률 판단이 필요한 질문은 해당 분야 전문가 확인이 필요합니다.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

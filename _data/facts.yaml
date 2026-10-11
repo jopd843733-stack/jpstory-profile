@@ -1,0 +1,282 @@
+# JP이야기(월드원공인중개사사무소) 운영 정책 값
+#
+# 사용법
+# 1. value: null 을 실제 값으로 바꿉니다. 값에 쉼표·콜론이 있으면 큰따옴표로 감쌉니다.
+#    예) value: "800,000원(VAT 별도)"
+# 2. 작업 폴더에서 `python scripts/render_docs.py` 를 실행합니다.
+# 3. company-profile.md, service-policy.md, faq.md 에 같은 값이 한 번에 반영됩니다.
+#
+# value 가 null 인 항목은 문서에 [확정 필요: label] 로 표시되고,
+# 각 문서 끝 "운영 전 확정할 항목" 목록에 자동으로 들어갑니다.
+# used_in 은 사람이 보기 위한 표시이며, 실제 사용처는 validate_docs.py 가 검사합니다.
+
+# ── 운영 ─────────────────────────────────────────────
+ops_hours:
+  label: 영업시간
+  value: null
+  used_in: [company-profile, faq]
+
+ops_holidays:
+  label: 휴무일
+  value: null
+  used_in: [company-profile, faq]
+
+ops_response_time:
+  label: 문의 응답 시간
+  value: null
+  used_in: [company-profile, service-policy, faq]
+
+ops_service_area:
+  label: 중개·컨설팅 서비스 가능 지역
+  value: null
+  used_in: [company-profile, service-policy, faq]
+
+ops_travel_range:
+  label: 촬영 출장 가능 범위
+  value: null
+  used_in: [service-policy, faq]
+
+ops_travel_fee:
+  label: 촬영 출장비 기준
+  value: null
+  used_in: [service-policy, faq]
+
+ops_visit_booking:
+  label: 사무소 방문 상담 예약 방법
+  value: null
+  used_in: [company-profile, faq]
+
+ops_email_official:
+  label: 이메일(jopd3733@nate.com)을 공식 문의 채널로 운영할지 여부
+  value: null
+  used_in: [company-profile, faq]
+
+# ── 중개 ─────────────────────────────────────────────
+brk_tour_booking:
+  label: 매물 현장 안내 예약 방법
+  value: null
+  used_in: [service-policy, faq]
+
+brk_officetel_rate:
+  label: 오피스텔(전용 85㎡ 초과 등 주거용 요건 미충족) 사무소 게시 상한요율
+  value: null
+  used_in: [service-policy]
+
+brk_nonhousing_rate:
+  label: 주택·오피스텔 외(토지·상가 등) 사무소 게시 상한요율
+  value: null
+  used_in: [service-policy, faq]
+
+brk_fee_payment_timing:
+  label: 중개보수 지급 시기
+  value: null
+  used_in: [service-policy, faq]
+
+brk_vat_method:
+  label: 중개보수 부가가치세 청구 방식
+  value: null
+  used_in: [service-policy, faq]
+
+brk_coop_split:
+  label: 공동중개 시 중개보수 분배 기준
+  value: null
+  used_in: [service-policy, faq]
+
+# ── 컨설팅 ───────────────────────────────────────────
+con_format:
+  label: 컨설팅 상담 형태(대면·전화·화상)
+  value: null
+  used_in: [company-profile, service-policy, faq]
+
+con_duration:
+  label: 컨설팅 1회 상담 시간
+  value: null
+  used_in: [service-policy, faq]
+
+con_fee:
+  label: 컨설팅 비용
+  value: null
+  used_in: [service-policy, faq]
+
+con_deliverable:
+  label: 컨설팅 결과물
+  value: null
+  used_in: [company-profile, service-policy, faq]
+
+con_brokerage_link:
+  label: 컨설팅 후 같은 건을 중개로 진행할 때의 비용 처리 기준
+  value: null
+  used_in: [service-policy, faq]
+
+# ── 신축 분양 ────────────────────────────────────────
+pre_scope:
+  label: 신축 분양 업무 범위(분양 대행 계약 여부 포함)
+  value: null
+  used_in: [company-profile, service-policy, faq]
+
+pre_client_cost:
+  label: 분양 상담 시 수분양 고객이 부담하는 비용 여부
+  value: null
+  used_in: [service-policy, faq]
+
+# ── 분양 현장 촬영 ───────────────────────────────────
+shs_package:
+  label: 분양 현장 촬영 패키지 구성
+  value: null
+  used_in: [service-policy, faq]
+
+shs_shoot_time:
+  label: 분양 현장 촬영 소요 시간
+  value: null
+  used_in: [service-policy, faq]
+
+shs_video_spec:
+  label: 분양 현장 촬영 영상 길이·편수
+  value: null
+  used_in: [service-policy, faq]
+
+shs_shorts:
+  label: 분양 현장 촬영 숏폼 포함 수
+  value: null
+  used_in: [service-policy, faq]
+
+shs_drone:
+  label: 분양 현장 촬영 드론 촬영 포함 여부
+  value: null
+  used_in: [service-policy, faq]
+
+shs_price:
+  label: 분양 현장 촬영 비용
+  value: null
+  used_in: [service-policy, faq]
+
+# ── 유튜브 촬영 협업 ─────────────────────────────────
+ytc_package:
+  label: 유튜브 촬영 협업 패키지 구성
+  value: null
+  used_in: [service-policy, faq]
+
+ytc_shoot_time:
+  label: 유튜브 촬영 협업 촬영 시간
+  value: null
+  used_in: [service-policy, faq]
+
+ytc_video_spec:
+  label: 유튜브 촬영 협업 영상 길이·편수
+  value: null
+  used_in: [service-policy, faq]
+
+ytc_shorts:
+  label: 유튜브 촬영 협업 숏폼 포함 수
+  value: null
+  used_in: [service-policy, faq]
+
+ytc_price:
+  label: 유튜브 촬영 협업 비용
+  value: null
+  used_in: [service-policy, faq]
+
+# ── 촬영 공통 (분양 현장 촬영·유튜브 촬영 협업) ─────────
+sht_revisions:
+  label: 촬영 영상 무상 수정 횟수
+  value: null
+  used_in: [service-policy, faq]
+
+sht_delivery:
+  label: 촬영 영상 납품 기한
+  value: null
+  used_in: [service-policy, faq]
+
+sht_raw_files:
+  label: 촬영 원본 파일 제공 여부
+  value: null
+  used_in: [service-policy, faq]
+
+sht_review_period:
+  label: 납품 영상 검수 기간
+  value: null
+  used_in: [service-policy, faq]
+
+sht_extra_revision_fee:
+  label: 무상 수정 범위 초과 시 추가 비용
+  value: null
+  used_in: [service-policy, faq]
+
+# ── 정산 ─────────────────────────────────────────────
+pay_ratio:
+  label: 착수금·잔금 비율
+  value: null
+  used_in: [service-policy, faq]
+
+pay_due:
+  label: 착수금·잔금 지급 기한
+  value: null
+  used_in: [service-policy, faq]
+
+pay_methods:
+  label: 결제 수단
+  value: null
+  used_in: [service-policy, faq]
+
+pay_receipt:
+  label: 세금계산서·현금영수증 발행 시점
+  value: null
+  used_in: [service-policy, faq]
+
+# ── 취소·환불 ────────────────────────────────────────
+cxl_refund:
+  label: 촬영 취소 시점별 환불 비율
+  value: null
+  used_in: [service-policy, faq]
+
+cxl_reschedule:
+  label: 고객 요청 일정 변경 가능 기한
+  value: null
+  used_in: [service-policy, faq]
+
+cxl_weather:
+  label: 우천·현장 사정으로 인한 촬영 일정 변경 기준
+  value: null
+  used_in: [service-policy, faq]
+
+cxl_consulting:
+  label: 컨설팅 예약 취소·환불 기준
+  value: null
+  used_in: [service-policy, faq]
+
+# ── 콘텐츠 ───────────────────────────────────────────
+cnt_copyright:
+  label: 촬영 영상 저작권 귀속
+  value: null
+  used_in: [service-policy, faq]
+
+cnt_client_use:
+  label: 고객의 영상 사용 가능 범위
+  value: null
+  used_in: [service-policy, faq]
+
+cnt_channel_post:
+  label: 촬영 영상의 JP이야기 채널 동시 게시 여부
+  value: null
+  used_in: [service-policy, faq]
+
+cnt_retention:
+  label: 촬영 원본 파일 보관 기간
+  value: null
+  used_in: [service-policy, faq]
+
+cnt_takedown:
+  label: 게시 영상 삭제·수정 요청 처리 기준
+  value: null
+  used_in: [service-policy, faq]
+
+# ── 개인정보·공통 ────────────────────────────────────
+pii_retention:
+  label: 상담 고객 개인정보 보유 기간
+  value: null
+  used_in: [service-policy, faq]
+
+pol_effective_date:
+  label: 정책 시행일
+  value: null
+  used_in: [service-policy]
