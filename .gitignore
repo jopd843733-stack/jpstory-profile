@@ -10,3 +10,9 @@ PROMPT_*.md
 # 로컬 도구 설정·상태
 .omc/
 .claude/
+
+# 의존성·로컬 키
+node_modules/
+.env
+.env.local
+.env*.local

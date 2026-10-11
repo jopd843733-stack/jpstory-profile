@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from render_docs import DOCS, HTML_DOCS, PUBLIC_DOCS, ROOT, SRC, load_facts, PLACEHOLDER  # noqa: E402
+from render_docs import DOCS, DOCS_DIR, HTML_DOCS, PUBLIC_DOCS, ROOT, SRC, load_facts, PLACEHOLDER  # noqa: E402
 
 FAQ_CATEGORIES = {
     "회사·담당자 소개 / 문의 채널·응대 방식": 8,
@@ -145,7 +145,7 @@ def main():
     facts = load_facts()
     texts = {}
     for name in DOCS:
-        path = ROOT / name
+        path = DOCS_DIR / name
         if not path.exists():
             err(f"{name}: 파일 없음 (render_docs.py 먼저 실행)")
             continue

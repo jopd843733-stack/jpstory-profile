@@ -1,0 +1,17 @@
+{
+  "name": "jpstory-profile",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.12"
+  },
+  "scripts": {
+    "ingest": "node scripts/ingest.mjs",
+    "ingest:dry": "node scripts/ingest.mjs --dry-run",
+    "dev": "node scripts/dev-server.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.133.0",
+    "@supabase/supabase-js": "^2.117.3"
+  }
+}

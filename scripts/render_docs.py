@@ -4,6 +4,7 @@
 - {{키}}        facts.yaml 의 value. value 가 null 이면 [확정 필요: label]
 - {{@pending}}  이 문서에서 쓰인 키 중 value 가 null 인 항목 목록
 - {{@status}}   FAQ 블록 안에서만 사용. 답변에 "[확정 필요" 가 있으면 미확정, 없으면 확정
+- {{@chatbot}}  HTML 전용. 배포용 페이지에는 챗봇 스크립트 태그, 검토용 페이지에는 빈 문자열
 
 사용법: python scripts/render_docs.py
 """
@@ -17,6 +18,7 @@ ROOT = Path(__file__).resolve().parent.parent
 FACTS = ROOT / "_data" / "facts.yaml"
 SRC = ROOT / "_src"
 DOCS = ["company-profile.md", "service-policy.md", "faq.md"]
+DOCS_DIR = ROOT / "docs"  # 챗봇 RAG 적재 대상(docs/*.md)
 # 디자인 적용 웹페이지: _src 의 HTML 템플릿 → 출력 경로
 HTML_DOCS = {"company-profile.html": ROOT / "design" / "company-profile.html"}
 # 배포용 공개 페이지(Vercel 출력 폴더 public/): 내부 구역 제거, 미확정 값은 안내 문구로 대체
@@ -112,7 +114,8 @@ def render(name, facts):
 
     if "{{" in out:
         sys.exit(f"{name}: 치환되지 않은 자리표시자가 남아 있습니다.")
-    (ROOT / name).write_text(out.rstrip("\n") + "\n", encoding="utf-8", newline="\n")
+    DOCS_DIR.mkdir(exist_ok=True)
+    (DOCS_DIR / name).write_text(out.rstrip("\n") + "\n", encoding="utf-8", newline="\n")
     return used, nulls
 
 
@@ -148,6 +151,8 @@ def render_html(name, out_path, facts, public=False):
     else:
         listing = "        <li><span>없음 (모든 정책 값이 확정되었습니다.)</span></li>"
     out = out.replace("{{@pending}}", listing)
+    # 고객응대 챗봇은 배포용 페이지에만 붙인다 (검토용 페이지는 로컬 파일로 열기 때문)
+    out = out.replace("{{@chatbot}}", '<script src="/chatbot.js" defer></script>' if public else "")
     if "{{" in out:
         sys.exit(f"{name}: 치환되지 않은 자리표시자가 남아 있습니다.")
     out_path.parent.mkdir(parents=True, exist_ok=True)
