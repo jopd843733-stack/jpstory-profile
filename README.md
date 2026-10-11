@@ -27,8 +27,7 @@
    python scripts/validate_docs.py
    ```
 
-3. 변경 사항을 커밋하고 GitHub에 푸시합니다.
-4. Vercel 프로젝트(`jpstory-profile`)에 다시 배포합니다. 푸시할 때마다 자동으로 배포되게 하려면 Vercel 대시보드의 프로젝트 Settings → Git 에서 이 저장소를 연결합니다.
+3. 변경 사항을 커밋하고 GitHub `main` 브랜치에 푸시하면 Vercel에 자동으로 다시 배포됩니다.
 
 웹페이지 주소: https://jpstory-profile.vercel.app
 
