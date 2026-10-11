@@ -36,9 +36,11 @@ FIRST = re.compile(r"(?<!생애)최초")  # "생애최초"는 제도 명칭이�
 GUARANTEE = re.compile(r"보장(?!하지 않|되지 않|하나요|되나요|하지는 않)")
 # 앞 문맥에 기대는 표현 (챗봇 청크 단독 사용 불가)
 CONTEXT_DEPENDENT = ["위에서 말씀드린", "앞서", "이 경우", "위에서 설명한", "저희"]
+# 브랜딩 기준상 쓰지 않는 표현 (회사 규모·연차 강조 금지)
+BRAND_EXCLUDED = ["1인 사무소", "1인 중개", "1인사무소", "년차", "대표가 직접", "같은 담당자"]
 
 # 0-1 확정 사실·공개 자료 기준일·법령 산식에서 온 숫자
-CONFIRMED_TOKENS = {"7년", "2026년", "11일", "100배", "70배", "100개"}
+CONFIRMED_TOKENS = {"2026년", "11일", "100배", "70배", "100개"}
 NUMBER_TOKEN = re.compile(
     r"\d+(?:[,.]\d+)*\s?(?:천만원|만원|억원|원|%|영업일|시간|개월|년|일|분|회|편|개|배|㎡)"
 )
@@ -186,6 +188,9 @@ def main():
         for word in CONTEXT_DEPENDENT:
             if word in text:
                 err(f"{name}: 앞 문맥 의존 표현 '{word}'")
+        for word in BRAND_EXCLUDED:
+            if word in text:
+                err(f"{name}: 브랜딩 제외 표현 '{word}'")
         for word in ("Claude", "AI 생성", "Generated with", "ChatGPT"):
             if word in text:
                 err(f"{name}: 작성 도구 흔적 '{word}'")
@@ -208,7 +213,7 @@ def main():
         visible = re.sub(r"<style.*?</style>|<[^>]+>", " ", page, flags=re.S)
         if "{{" in page:
             err(f"{rel}: 치환되지 않은 '{{{{' 남아 있음")
-        for word in FORBIDDEN + ["Claude", "AI 생성", "Generated with", "ChatGPT"]:
+        for word in FORBIDDEN + BRAND_EXCLUDED + ["Claude", "AI 생성", "Generated with", "ChatGPT"]:
             if word in visible:
                 err(f"{rel}: 금지 표현·흔적 '{word}'")
         for line in visible.split("\n"):
