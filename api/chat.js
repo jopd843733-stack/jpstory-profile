@@ -5,7 +5,9 @@ import { guard, rateLimiter, readJson, sendJson } from "../lib/http.js";
 import { SYSTEM_PROMPT, buildUserContent } from "../lib/prompt.js";
 import { supabaseAdmin } from "../lib/supabase.js";
 
-const MATCH_COUNT = 6; // 검색해 올 문서 조각 수
+const MATCH_COUNT = 8; // 검색해 올 문서 조각 수
+// 주소·연락처·등록번호 등 기본 정보는 질문 표현과 관계없이 항상 근거에 포함한다
+const CORE_SOURCE = "company-profile.md#회사 개요";
 const MIN_SIMILARITY = 0.25; // 이보다 관련도가 낮은 조각은 근거로 쓰지 않는다
 const MAX_MESSAGE = 1000;
 const MAX_HISTORY = 8;
@@ -54,12 +56,14 @@ export default async function handler(req, res) {
   try {
     // 1) 질문 임베딩 → 2) 유사 문서 검색
     const [queryEmbedding] = await embed([message]);
-    const { data: matches, error: matchError } = await supabaseAdmin().rpc("match_documents", {
-      query_embedding: queryEmbedding,
-      match_count: MATCH_COUNT,
-    });
+    const db = supabaseAdmin();
+    const [{ data: matches, error: matchError }, { data: core }] = await Promise.all([
+      db.rpc("match_documents", { query_embedding: queryEmbedding, match_count: MATCH_COUNT }),
+      db.from("documents").select("source, content").eq("source", CORE_SOURCE).limit(1),
+    ]);
     if (matchError) throw new Error(`문서 검색 실패: ${matchError.message}`);
     const docs = (matches || []).filter((d) => d.similarity >= MIN_SIMILARITY);
+    if (core?.[0] && !docs.some((d) => d.source === CORE_SOURCE)) docs.unshift(core[0]);
 
     // 3) 검색된 문서만 근거로 답변 생성
     anthropic ||= new Anthropic({ apiKey: requireEnv("ANTHROPIC_API_KEY") });
